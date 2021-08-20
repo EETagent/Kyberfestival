@@ -1,0 +1,21 @@
+FROM ubuntu:21.04
+
+ENV TZ=Europe/Prague
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+RUN apt-get update && apt-get upgrade -y &&  apt-get install -y libssl1.1 ca-certificates
+
+WORKDIR /webserver
+
+COPY ./utilitky/httplz /webserver/httplz
+RUN chmod +x /webserver/httplz
+COPY ./css /webserver/css
+COPY ./images /webserver/images
+COPY ./js /webserver/js
+COPY ./lang /webserver/lang
+COPY ./index.php /webserver/index.php
+RUN printf "Vitej v uzavrenem kontejneru\nWeb se nachazi na adrese https://185.217.233.87:8000/lang/cz/index.html" > /webserver/README.txt
+
+EXPOSE 8000 80
+
+ENTRYPOINT ["./httplz", "--gen-ssl"]
