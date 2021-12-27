@@ -113,17 +113,17 @@ const Navbar: Component = () => {
           className="lg:hidden"
           style="background: repeating-linear-gradient(
               -45deg,
-              black,
-              black 10px,
-              #444 10px,
-              #444 11px
+              #f6f5f5,
+              #f6f5f5 10px,
+              #276678 10px,
+              #276678 11px
             );"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               onClick={() => setIsOpen(!isOpen())}
               href="/about"
-              className="text-white hover:bg-gray-700 block mx-10 px-3 py-2 rounded-md text-base  uppercase"
+              className="text-kyberfestival-green hover:bg-kyberfestival-green hover:text-white block mx-10 px-3 py-2 rounded-md text-base  uppercase"
             >
               O konferenci
             </Link>
@@ -131,7 +131,7 @@ const Navbar: Component = () => {
             <Link
               onClick={() => setIsOpen(!isOpen())}
               href="/program"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white mx-10 block px-3 py-2 rounded-md text-base  uppercase"
+              className="text-kyberfestival-green hover:bg-kyberfestival-green hover:text-white mx-10 block px-3 py-2 rounded-md text-base  uppercase"
             >
               Podrobný program
             </Link>
@@ -139,7 +139,7 @@ const Navbar: Component = () => {
             <Link
               onClick={() => setIsOpen(!isOpen())}
               href="/speakers"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white mx-10 block px-3 py-2 rounded-md text-base  uppercase"
+              className="text-kyberfestival-green hover:bg-kyberfestival-green hover:text-white mx-10 block px-3 py-2 rounded-md text-base  uppercase"
             >
               Naši řečníci
             </Link>
@@ -147,7 +147,7 @@ const Navbar: Component = () => {
             <Link
               onClick={() => setIsOpen(!isOpen())}
               href="/tiskovazprava"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white mx-10 block px-3 py-2 rounded-md text-base  uppercase"
+              className="text-kyberfestival-green hover:bg-kyberfestival-green hover:text-white mx-10 block px-3 py-2 rounded-md text-base  uppercase"
             >
               Kontakt
             </Link>
@@ -155,7 +155,7 @@ const Navbar: Component = () => {
             <Link
               onClick={() => setIsOpen(!isOpen())}
               href="/view"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white mx-10 block px-3 py-2 rounded-md text-base  uppercase"
+              className="text-kyberfestival-green hover:bg-kyberfestival-green hover:text-white mx-10 block px-3 py-2 rounded-md text-base  uppercase"
             >
               Sledovat
             </Link>

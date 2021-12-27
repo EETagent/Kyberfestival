@@ -3,7 +3,6 @@
       "strict": true,
       "target": "es6",
       "module": "esnext",
-      "resolveJsonModule": true,
       "moduleResolution": "node",
       "allowSyntheticDefaultImports": true,
       "esModuleInterop": true,

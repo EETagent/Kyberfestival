@@ -46,7 +46,7 @@ const Speakers: Component = () => {
       <div className="flex flex-col"></div>
       <For each={SPEAKERS}>
         {(item, i) => (
-          <div className="mb-4">
+          <div className="mb-2">
             <Speaker item={item} right={i() % 2 === 0 ? true : false} />
           </div>
         )}

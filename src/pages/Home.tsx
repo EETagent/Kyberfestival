@@ -51,7 +51,7 @@ const Home: Component = () => {
       .load("tsparticles", {
         particles: {
           number: {
-            value: 50,
+            value: 65,
             density: {
               enable: true,
               value_area: 800,
@@ -104,7 +104,7 @@ const Home: Component = () => {
           },
           move: {
             enable: true,
-            speed: 3,
+            speed: 2,
             direction: "none",
             random: false,
             straight: false,
@@ -116,7 +116,7 @@ const Home: Component = () => {
             },
           },
         },
-        fullScreen: true,
+        fullScreen: false,
         retina_detect: true,
       })
       .then(() => {
@@ -128,6 +128,7 @@ const Home: Component = () => {
   return (
     <>
       <div class="w-8/10 mx-auto">
+        <div id="tsparticles" className="absolute h-screen"></div>
         <div class="mt-20 h-[80vh] flex flex-col  items-center md:items-baseline">
           <span
             class="mb-3 md:text-2xl"
