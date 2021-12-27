@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  line-height: 1.7;
+  color: #276678;
+  font-weight: 300;
+  font-size: 1rem;
+  background: #f6f5f5;
+}
+
+.btn-custom {
+  text-transform: uppercase;
+  color: #f6f5f5 !important;
+  background: #276678;
+  padding: 16px 30px;
+  display: inline-block;
+  letter-spacing: 0.2em;
+  position: relative;
+  border: none;
+}
+
+.btn-form {
+  text-transform: uppercase;
+  color: #f6f5f5 !important;
+  background: #276678;
+  padding: 16px 30px;
+  display: inline-block;
+  letter-spacing: 0.2em;
+  position: relative;
+  border: none;
+}
+.btn-form:hover {
+  background: #2f778c;
+}
+.filter-menu .btn-custom {
+  margin-top: 1em;
+}
+.btn-custom-navbar {
+  padding: 4px 8px;
+  background: #f6f5f5;
+  color: #276678 !important;
+  border: 1px solid #276678;
+}
+
+.btn-custom:before {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#276678),
+    color-stop(70%, #1687a7)
+  );
+  background: -webkit-linear-gradient(left, #276678, #1687a7 70%);
+  background: -o-linear-gradient(left, #276678, #1687a7 70%);
+  background: linear-gradient(to right, #276678, #1687a7 70%);
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 0;
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  z-index: 1;
+}
+
+.btn-custom:hover:before {
+  width: 100%;
+}
+.btn-custom-navbar:hover {
+  color: white !important;
+}
+
+.btn-custom > span {
+  position: relative;
+  z-index: 2;
+}

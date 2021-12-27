@@ -1,0 +1,23 @@
+{
+  "name": "bezpecnost-ssps-web",
+  "version": "0.0.3",
+  "scripts": {
+    "dev": "vite",
+    "start": "npm run dev",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.4",
+    "vite": "^2.7.3",
+    "vite-plugin-solid": "^2.1.4",
+    "vite-plugin-windicss": "^1.6.1",
+    "windicss": "^3.4.1"
+  },
+  "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "solid-app-router": "^0.1.14",
+    "solid-js": "^1.2.6",
+    "tsparticles": "^1.37.6"
+  }
+}
