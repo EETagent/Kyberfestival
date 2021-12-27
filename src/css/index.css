@@ -22,9 +22,9 @@ body {
   text-transform: uppercase;
   color: #f6f5f5 !important;
   background: #276678;
-  padding: 16px 30px;
+  padding: 1rem 2rem;
   display: inline-block;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.2rem;
   position: relative;
   border: none;
 }
@@ -33,9 +33,9 @@ body {
   text-transform: uppercase;
   color: #f6f5f5 !important;
   background: #276678;
-  padding: 16px 30px;
+  padding: 1rem 2rem;
   display: inline-block;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.2rem;
   position: relative;
   border: none;
 }
@@ -43,10 +43,10 @@ body {
   background: #2f778c;
 }
 .filter-menu .btn-custom {
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 .btn-custom-navbar {
-  padding: 4px 8px;
+  padding: 0.25rem 0.5rem;
   background: #f6f5f5;
   color: #276678 !important;
   border: 1px solid #276678;
@@ -78,6 +78,14 @@ body {
 .btn-custom:hover:before {
   width: 100%;
 }
+
+.btn-selected:before {
+  width: 100%;
+}
+.btn-selected {
+  color: white !important;
+}
+
 .btn-custom-navbar:hover {
   color: white !important;
 }

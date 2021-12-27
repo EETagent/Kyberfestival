@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import PDF from "./components/PDF";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Speakers from "./pages/Speakers";
 import View from "./pages/View";
 import Countdown from "./pages/Countdown";
 
@@ -23,6 +24,7 @@ const App: Component = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/view" element={<View />} />
+        <Route path="/speakers" element={<Speakers />} />
         <Route path="/countdown" element={<Countdown />} />
         <Route path="/program" element={<PDF src={program} />} />
         <Route path="/memorandum" element={<PDF src={memorandum} />} />
