@@ -86,7 +86,7 @@ const Navbar: Component = () => {
                   href="/kontakt"
                   description="Kontakt"
                 />
-                <Link href="/view" class="btn-custom btn-custom-navbar">
+                <Link href="/view" className="btn-custom btn-custom-navbar">
                   <span>Sledovat</span>
                 </Link>
               </div>

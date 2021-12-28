@@ -1,6 +1,6 @@
 {
-  "name": "bezpecnost-ssps-web",
-  "version": "0.0.3",
+  "name": "kyberfestival",
+  "version": "1.9.9",
   "scripts": {
     "dev": "vite",
     "start": "npm run dev",

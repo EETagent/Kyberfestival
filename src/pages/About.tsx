@@ -13,10 +13,10 @@ const About: Component = () => {
   return (
     <>
       <div className="w-8/10 mx-auto mt-15">
-        <div class="flex flex-col md:flex-row mb-5">
-          <div class="md:w-4/10 lg:w-3/10">
+        <div className="flex flex-col md:flex-row mb-5">
+          <div className="md:w-4/10 lg:w-3/10">
             <div
-              class="font-bold text-4xl"
+              className="font-bold text-4xl"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -24,11 +24,11 @@ const About: Component = () => {
             </div>
           </div>
           <div
-            class="md:w-6/10 lg:w-7/10 mt-5 md:pl-5"
+            className="md:w-6/10 lg:w-7/10 mt-5 md:pl-5"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <p style="font-weight: bold;">
+            <p className="font-bold">
               „Nevěřte všemu, co se vám k věření předkládá: Zkoumejte vše a
               přesvědčujte se sami!“
               <br />
@@ -102,14 +102,14 @@ const About: Component = () => {
               také na šíření osvěty v daných lokalitách mezi řediteli, učiteli,
               studenty, žáky a jejich rodiči.{" "}
             </p>
-            <div class="mt-4 flex flex-row items-center">
+            <div className="mt-4 flex flex-row items-center">
               <figure className="w-1/7">
                 <picture>
                   <source srcset={SABLIK?.imageAVIF} type="image/avif" />
                   <img
                     src={SABLIK?.image}
                     alt={SABLIK?.name}
-                    class="rounded-full"
+                    className="rounded-full"
                   />
                 </picture>
               </figure>
@@ -121,18 +121,18 @@ const About: Component = () => {
             </div>
           </div>
         </div>
-        <div class="my-12">
-          <div class="w-full" data-aos="fade-up" data-aos-delay="300">
+        <div className="my-12">
+          <div className="w-full" data-aos="fade-up" data-aos-delay="300">
             <picture>
               <source srcset={konferenceAVIF} type="image/avif" />
-              <img src={konferenceJPEG} alt="Kyberfestival" class="img-fluid" />
+              <img src={konferenceJPEG} alt="Kyberfestival" className="img-fluid" />
             </picture>
           </div>
         </div>
-        <div class="flex flex-col md:flex-row">
-          <div class="md:w-4/10 lg:w-3/10">
+        <div className="flex flex-col md:flex-row">
+          <div className="md:w-4/10 lg:w-3/10">
             <div
-              class="font-bold text-4xl"
+              className="font-bold text-4xl"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -140,7 +140,7 @@ const About: Component = () => {
             </div>
           </div>
           <div
-            class="md:w-6/10 lg:w-7/10 mt-5 md:pl-5"
+            className="md:w-6/10 lg:w-7/10 mt-5 md:pl-5"
             data-aos="fade-up"
             data-aos-delay="500"
           >
@@ -190,14 +190,14 @@ const About: Component = () => {
               prostředků státu, regionů či konkrétních výzev z evropských,
               státních či regionálních dotačních programů.{" "}
             </p>
-            <div class="mt-4 flex flex-row items-center">
+            <div className="mt-4 flex flex-row items-center">
               <figure className="w-1/7">
                 <picture>
                   <source srcset={SABLIK?.imageAVIF} type="image/avif" />
                   <img
                     src={SABLIK?.image}
                     alt={SABLIK?.name}
-                    class="rounded-full"
+                    className="rounded-full"
                   />
                 </picture>
               </figure>
@@ -209,33 +209,32 @@ const About: Component = () => {
             </div>
           </div>
         </div>
-        <div class="flex flex-col items-center mt-30">
-          <div class="flex flex-row mb-5 justify-center">
-            <div class="mb-5">
-              <div class="text-6xl" data-aos="fade-up">
-                <h2 class="text-center">Naši řečníci</h2>
+        <div className="flex flex-col items-center mt-30">
+          <div className="flex flex-row mb-5 justify-center">
+            <div className="mb-5">
+              <div className="text-6xl" data-aos="fade-up">
+                <h2 className="text-center">Naši řečníci</h2>
               </div>
             </div>
           </div>
-          <div class="grid w-1/2 md:w-full grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid w-1/2 md:w-full grid-cols-1 md:grid-cols-3 gap-10">
             <For each={SPEAKERS}>
               {(speaker, i) => (
                 <div data-aos="fade-up" data-aos-delay="100">
-                  <div class="flex flex-col justify-center items-center text-center">
+                  <div className="flex flex-col justify-center items-center text-center">
                     <figure>
                       <picture>
                         <source srcset={speaker.imageAVIF} type="image/avif" />
                         <img
-                          className="w-1/2 mx-auto"
+                          className="w-1/2 mx-auto rounded-full"
                           src={speaker.image}
                           alt={speaker.name}
-                          class="rounded-full"
                         />
                       </picture>
                     </figure>
                     <blockquote className="mt-3">
-                      <p class="mb-0">{speaker.name}</p>
-                      <p class="mb-4 text-sm">{speaker.organization}</p>
+                      <p className="mb-0">{speaker.name}</p>
+                      <p className="mb-4 text-sm">{speaker.organization}</p>
                     </blockquote>
                   </div>
                 </div>
@@ -243,15 +242,15 @@ const About: Component = () => {
             </For>
           </div>
         </div>
-        <div class="flex flex-col mt-15">
-          <div class="flex flex-col md:flex-row mb-5">
-            <div class="md:w-6/10">
-              <div class="text-6xl" data-aos="fade-up">
+        <div className="flex flex-col mt-15">
+          <div className="flex flex-col md:flex-row mb-5">
+            <div className="md:w-6/10">
+              <div className="text-6xl" data-aos="fade-up">
                 <h2>Partneři</h2>
               </div>
             </div>
             <div
-              class="md:w-4/10 mt-5 md:pl-5"
+              className="md:w-4/10 mt-5 md:pl-5"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -262,7 +261,7 @@ const About: Component = () => {
               </p>
             </div>
           </div>
-          <div class="grid gap-6 grid-cols-2 md:grid-cols-3 mb-5">
+          <div className="grid gap-6 grid-cols-2 md:grid-cols-3 mb-5">
             <Partners />
           </div>
         </div>

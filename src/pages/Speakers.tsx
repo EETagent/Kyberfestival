@@ -33,7 +33,7 @@ const Speakers: Component = () => {
     );
   };
   return (
-    <div class="w-8/10 mx-auto mt-15 flex flex-col">
+    <div className="w-8/10 mx-auto mt-15 flex flex-col">
       <h1 className="text-4xl my-5">Naši řečníci</h1>
       <hr />
       <span className="my-5">Filtruj podle organizace</span>

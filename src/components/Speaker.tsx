@@ -6,35 +6,35 @@ const Speaker: Component<{ item: SpeakersInterface; right?: boolean }> = ({
     right = false,
   }) => {
     return (
-      <div class="flex flex-col md:flex-row items-center my-12">
+      <div className="flex flex-col md:flex-row items-center my-12">
         <div
-          class={`md:w-1/2 mb-5 lg:mb-0 ${right ? "md:order-2" : ""}`}
+          className={`md:w-1/2 mb-5 lg:mb-0 ${right ? "md:order-2" : ""}`}
           data-aos="fade"
           data-aos-delay="100"
         >
           <picture>
             <source srcset={person.imageAVIF} type="image/avif" />
-            <img src={person.image} alt={person.name} class="img-fluid" />
+            <img src={person.image} alt={person.name} className="img-fluid" />
           </picture>
         </div>
-        <div class={`md:w-1/2 ml-auto ${right ? "md:order-1" : ""}`}>
-          <div class={`bio ${right ? "md:pr-lg-5" : "md:pl-lg-5"}`}>
+        <div className={`md:w-1/2 ml-auto ${right ? "md:order-1" : ""}`}>
+          <div className={`bio ${right ? "md:pr-lg-5" : "md:pl-lg-5"}`}>
             <h2
-              class="block mb-4 text-2xl"
+              className="block mb-4 text-2xl"
               data-aos={`${right ? "fade-right" : "fade-left"}`}
               data-aos-delay="200"
             >
               {person.name}
             </h2>
             <span
-              class="uppercase block mb-3"
+              className="uppercase block mb-3"
               data-aos={`${right ? "fade-right" : "fade-left"}`}
               data-aos-delay="300"
             >
               {person.organization}
             </span>
             <p
-              class="mb-4"
+              className="mb-4"
               data-aos={`${right ? "fade-right" : "fade-left"}`}
               data-aos-delay="400"
             >
@@ -49,16 +49,16 @@ const Speaker: Component<{ item: SpeakersInterface; right?: boolean }> = ({
                 <Show when={person.social!.web}>
                   <a
                     href={person.social!.web}
-                    class="p-2 fab fa-firefox-browser"
+                    className="p-2 fab fa-firefox-browser"
                   ></a>
                 </Show>
                 <Show when={person.social!.twitter}>
-                  <a href={person.social!.twitter} class="p-2 fab fa-twitter"></a>
+                  <a href={person.social!.twitter} className="p-2 fab fa-twitter"></a>
                 </Show>
                 <Show when={person.social!.facebook}>
                   <a
                     href={person.social!.facebook}
-                    class="p-2 fab fa-facebook"
+                    className="p-2 fab fa-facebook"
                   ></a>
                 </Show>
               </p>

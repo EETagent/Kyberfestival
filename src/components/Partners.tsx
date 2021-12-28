@@ -11,7 +11,7 @@ const PartnerItem: Component<{ item: PartnersInterface }> = ({
     >
       <picture>
         <source srcset={partner.logoAVIF} type="image/avif " />
-        <img src={partner.logo} alt={partner.organization} class="img-fluid" />
+        <img src={partner.logo} alt={partner.organization} className="img-fluid" />
       </picture>
     </div>
   );
