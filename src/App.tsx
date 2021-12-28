@@ -4,17 +4,17 @@ import { lazy } from "solid-js";
 import { Routes, Route } from "solid-app-router";
 
 import Navbar from "./components/Navbar";
-import PDF from "./components/PDF";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Speakers from "./pages/Speakers";
-import View from "./pages/View";
-import Countdown from "./pages/Countdown";
+
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Speakers = lazy(() => import("./pages/Speakers"));
+const View = lazy(() => import("./pages/View"));
+const Countdown = lazy(() => import("./pages/Countdown"));
 
 import memorandum from "./assets/memorandum.pdf";
 import program from "./assets/program.pdf";
 import tiskovazprava from "./assets/tiskovazprava.pdf";
-
+const PDF = lazy(() => import("./components/PDF"));
 
 const App: Component = () => {
   return (
