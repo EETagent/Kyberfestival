@@ -11,9 +11,13 @@ const Speakers = lazy(() => import("./pages/Speakers"));
 const View = lazy(() => import("./pages/View"));
 const Countdown = lazy(() => import("./pages/Countdown"));
 
-import memorandum from "./assets/memorandum.pdf";
-import program from "./assets/program.pdf";
-import tiskovazprava from "./assets/tiskovazprava.pdf";
+import memorandum from "./assets/documents/memorandum.pdf";
+import program from "./assets/documents/program.pdf";
+import tiskovazprava from "./assets/documents/tiskovazprava.pdf";
+import memorandumFallback from "./assets/documents/memorandum.html?url";
+import programFallback from "./assets/documents/program.html?url";
+import tiskovazpravaFallback from "./assets/documents/tiskovazprava.html?url";
+
 const PDF = lazy(() => import("./components/PDF"));
 
 const App: Component = () => {
@@ -26,9 +30,9 @@ const App: Component = () => {
         <Route path="/view" element={<View />} />
         <Route path="/speakers" element={<Speakers />} />
         <Route path="/countdown" element={<Countdown />} />
-        <Route path="/program" element={<PDF src={program} />} />
-        <Route path="/memorandum" element={<PDF src={memorandum} />} />
-        <Route path="/tiskovazprava" element={<PDF src={tiskovazprava} />} />
+        <Route path="/program" element={<PDF src={program} srcFallback={memorandumFallback} />} />
+        <Route path="/memorandum" element={<PDF src={memorandum} srcFallback={programFallback}/>} />
+        <Route path="/tiskovazprava" element={<PDF src={tiskovazprava} srcFallback={tiskovazpravaFallback}/>} />
         {/* <Route path="/*all" element={<NotFound />} /> */}
       </Routes>
     </>
