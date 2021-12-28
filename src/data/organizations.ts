@@ -1,7 +1,19 @@
 const enum ORGANIZATIONS {
-    SSPŠ = "SSPŠ",
-    NÚKIB = "NÚKIB",
-    SPOLUSILNEJSI = "SPOLUSILNĚJŠÍ",
+    SSPS = "SSPŠ",
+    NUKIB = "NÚKIB",
+    CUNI = "CUNI",
+    SPOLUSILNĚJSI = "SPOLUSILNĚJŠÍ",
+    CVUT = "ČVUT",
+    AFCEA = "AFCEA",
+    PRAHA = "PRAHA",
+    SUKL = "SÚKL",
+    JSNS = "JSNS",
+    DOCTRINA = "DOCTRINA",
+    MSMT = "MŠMT",
+    CICHNOVABRNO = "ČICHNOVABRNO",
+    MVCR = "MVČR",
+    SPSASOSDVURKRALOVE = "SPŠASOŠDVŮRKRÁLOVÉ",
+    PRAZSKÝINOVACNIINSITUT = "PRAŽSKÝINOVAČNÍINSITUT",
 }
 
 export default ORGANIZATIONS;
