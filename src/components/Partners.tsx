@@ -5,15 +5,17 @@ const PartnerItem: Component<{ item: PartnersInterface }> = ({
   item: partner,
 }) => {
   return (
-    <div
+    <a
       data-aos="fade"
       data-aos-delay="200"
+      href={partner.website}
+      target="_blank"
     >
       <picture>
         <source srcset={partner.logoAVIF} type="image/avif " />
         <img src={partner.logo} alt={partner.organization} className="img-fluid" />
       </picture>
-    </div>
+    </a>
   );
 };
 
