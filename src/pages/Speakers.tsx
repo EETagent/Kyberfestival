@@ -1,10 +1,14 @@
-import { Component, createSignal, For } from "solid-js";
+import { Component, createEffect, createSignal, For } from "solid-js";
 
 import { SPEAKERS } from "../data/speakers";
+import ORGANIZATIONS from "../data/organizations";
+
 import Speaker from "../components/Speaker";
 
 const Speakers: Component = () => {
-  const [filtered, setFiltered] = createSignal<Set<string>>(new Set());
+  const [filtered, setFiltered] = createSignal<Set<string>>(
+    new Set(["VŠECHNO"])
+  );
   const updateFilter = (e: Event, selected: boolean) => {
     const button = e.currentTarget as HTMLButtonElement;
     const organization = button.innerText;
@@ -17,16 +21,17 @@ const Speakers: Component = () => {
   };
   const SelectButton: Component<{ item: string }> = ({ item }) => {
     const [selected, setSelected] = createSignal<boolean>(false);
-
+    createEffect(() => {
+      filtered().has(item) ? setSelected(true) : setSelected(false);
+    });
     return (
       <button
         onclick={(e) => {
           updateFilter(e, selected());
-          setSelected(!selected());
         }}
         className={`btn-custom uppercase text-kyberfestival-green bg-kyberfestival-bg border-solid border-kyberfestival-green border-1 py-1 px-2 inline-block relative hover:before:w-[100%] hover:text-kyberfestival-bg ${
           selected() ? "text-kyberfestival-bg before:w-[100%]" : ""
-        } mr-2 mb-2`}
+        } my-2 mr-2 mb-2`}
       >
         <span>{item}</span>
       </button>
@@ -39,12 +44,19 @@ const Speakers: Component = () => {
       <span className="my-5">Filtruj podle organizace</span>
       <hr />
       <div className="flex flex-row flex-wrap mb-10">
-        <For each={["JEDNA", "DVA", "TRI", "CTYRI", "PET", "DLOUHA ORGANIZACE", "ATD"]}>
+        <For
+          each={Array.from(
+            new Set([
+              "VŠECHNO",
+              ...SPEAKERS.map((speaker) => speaker.organization.toString()),
+            ])
+          )}
+        >
           {(item) => <SelectButton item={item} />}
         </For>
       </div>
       <div className="flex flex-col"></div>
-      <For each={SPEAKERS}>
+      <For each={filtered().has("VŠECHNO") ? SPEAKERS : SPEAKERS.filter(speaker => filtered().has(speaker.organization.toString()))}>
         {(item, i) => (
           <div className="mb-2">
             <Speaker item={item} right={i() % 2 === 0 ? true : false} />

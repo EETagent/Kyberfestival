@@ -3,9 +3,12 @@ const speakerAVIF = import.meta.globEager(
   "../assets/images/avif/speakers/*.avif"
 );
 
+import ORGANIZATIONS from "./organizations";
+
 export interface SpeakersInterface {
   name: string;
-  organization: string;
+  role: string;
+  organization: ORGANIZATIONS;
   description: string;
   image: string;
   imageAVIF: string;
@@ -21,7 +24,8 @@ export interface SpeakersSocial {
 export const SPEAKERS: SpeakersInterface[] = [
   {
     name: "Radko Sáblík",
-    organization: "Ředitel SSPŠ",
+    role: "Ředitel SSPŠ",
+    organization: ORGANIZATIONS.SSPŠ,
     description:
       "Středoškolský pedagog, spisovatel, od roku 2002 ředitel Smíchovské střední průmyslové školy, člen expertní skupiny Strategie 2030+ a od října 2018 místostarosta města Mníšek pod Brdy za Občanskou demokratickou stranu.",
     image: speaker["../assets/images/speakers/person_sablik.jpg"].default,
@@ -34,7 +38,8 @@ export const SPEAKERS: SpeakersInterface[] = [
   },
   {
     name: "Karel Řehka",
-    organization: "Ředitel NÚKIB",
+    role: "Ředitel NÚKIB",
+    organization: ORGANIZATIONS.NÚKIB,
     description:
       "Karel Řehka je český voják, od března 2020 ředitel Národního úřadu pro kybernetickou a informační bezpečnost (NÚKIB), v letech 2010 až 2014 velitel 601. skupiny speciálních sil generála Moravce.",
     image: speaker["../assets/images/speakers/person_rehka.jpg"].default,
@@ -47,7 +52,8 @@ export const SPEAKERS: SpeakersInterface[] = [
   },
   {
     name: "Petr Pavel",
-    organization: "Armádní generál Armády České republiky ve výslužbě",
+    role: "Armádní generál Armády České republiky ve výslužbě",
+    organization: ORGANIZATIONS.SPOLUSILNEJSI,
     description:
       "Armádní generál ve výslužbě, bývalý náčelník Generálního štábu Armády České republiky a předseda vojenského výboru NATO. Za své služby získal mnoho českých i mezinárodních vojenských vyznamenání. Dnes se věnuje přednáškám a besedám s občany. Na jaře 2020 založil iniciativu Spolu silnější, nejprve ve formě sbírky, která pomáhá lidem v první linii boje s epidemií a těm, na které krize dopadá nejhůře. Později dal s experty dali dohromady doporučení pro lepší zvládání krizí a nyní usiluje o důkladnou revizi krizového řízení naší země. Snaží se jít příkladem v aktivním občanství a dobrovolnictví.",
     image: speaker["../assets/images/speakers/person_pavel.jpg"].default,
@@ -56,7 +62,8 @@ export const SPEAKERS: SpeakersInterface[] = [
   },
   {
     name: "Radko Sáblík",
-    organization: "Ředitel SSPŠ",
+    role: "Ředitel SSPŠ",
+    organization: ORGANIZATIONS.SSPŠ,
     description:
       "Středoškolský pedagog, spisovatel, od roku 2002 ředitel Smíchovské střední průmyslové školy, člen expertní skupiny Strategie 2030+ a od října 2018 místostarosta města Mníšek pod Brdy za Občanskou demokratickou stranu.",
     image: speaker["../assets/images/speakers/person_sablik.jpg"].default,
@@ -68,8 +75,23 @@ export const SPEAKERS: SpeakersInterface[] = [
     },
   },
   {
+    name: "Karel Řehka",
+    role: "Ředitel NÚKIB",
+    organization: ORGANIZATIONS.NÚKIB,
+    description:
+      "Karel Řehka je český voják, od března 2020 ředitel Národního úřadu pro kybernetickou a informační bezpečnost (NÚKIB), v letech 2010 až 2014 velitel 601. skupiny speciálních sil generála Moravce.",
+    image: speaker["../assets/images/speakers/person_rehka.jpg"].default,
+    imageAVIF:
+      speakerAVIF["../assets/images/avif/speakers/person_rehka.avif"].default,
+    social: {
+      web: "https://nukib.cz/cs/o-nukib/vedeni-uradu/",
+      twitter: "https://twitter.com/nukib_cz",
+    },
+  },
+  {
     name: "Petr Pavel",
-    organization: "Armádní generál Armády České republiky ve výslužbě",
+    role: "Armádní generál Armády České republiky ve výslužbě",
+    organization: ORGANIZATIONS.SPOLUSILNEJSI,
     description:
       "Armádní generál ve výslužbě, bývalý náčelník Generálního štábu Armády České republiky a předseda vojenského výboru NATO. Za své služby získal mnoho českých i mezinárodních vojenských vyznamenání. Dnes se věnuje přednáškám a besedám s občany. Na jaře 2020 založil iniciativu Spolu silnější, nejprve ve formě sbírky, která pomáhá lidem v první linii boje s epidemií a těm, na které krize dopadá nejhůře. Později dal s experty dali dohromady doporučení pro lepší zvládání krizí a nyní usiluje o důkladnou revizi krizového řízení naší země. Snaží se jít příkladem v aktivním občanství a dobrovolnictví.",
     image: speaker["../assets/images/speakers/person_pavel.jpg"].default,
@@ -77,21 +99,9 @@ export const SPEAKERS: SpeakersInterface[] = [
       speakerAVIF["../assets/images/avif/speakers/person_pavel.avif"].default,
   },
   {
-    name: "Karel Řehka",
-    organization: "Ředitel NÚKIB",
-    description:
-      "Karel Řehka je český voják, od března 2020 ředitel Národního úřadu pro kybernetickou a informační bezpečnost (NÚKIB), v letech 2010 až 2014 velitel 601. skupiny speciálních sil generála Moravce.",
-    image: speaker["../assets/images/speakers/person_rehka.jpg"].default,
-    imageAVIF:
-      speakerAVIF["../assets/images/avif/speakers/person_rehka.avif"].default,
-    social: {
-      web: "https://nukib.cz/cs/o-nukib/vedeni-uradu/",
-      twitter: "https://twitter.com/nukib_cz",
-    },
-  },
-  {
     name: "Radko Sáblík",
-    organization: "Ředitel SSPŠ",
+    role: "Ředitel SSPŠ",
+    organization: ORGANIZATIONS.SSPŠ,
     description:
       "Středoškolský pedagog, spisovatel, od roku 2002 ředitel Smíchovské střední průmyslové školy, člen expertní skupiny Strategie 2030+ a od října 2018 místostarosta města Mníšek pod Brdy za Občanskou demokratickou stranu.",
     image: speaker["../assets/images/speakers/person_sablik.jpg"].default,
@@ -104,7 +114,8 @@ export const SPEAKERS: SpeakersInterface[] = [
   },
   {
     name: "Karel Řehka",
-    organization: "Ředitel NÚKIB",
+    role: "Ředitel NÚKIB",
+    organization: ORGANIZATIONS.NÚKIB,
     description:
       "Karel Řehka je český voják, od března 2020 ředitel Národního úřadu pro kybernetickou a informační bezpečnost (NÚKIB), v letech 2010 až 2014 velitel 601. skupiny speciálních sil generála Moravce.",
     image: speaker["../assets/images/speakers/person_rehka.jpg"].default,
@@ -117,7 +128,8 @@ export const SPEAKERS: SpeakersInterface[] = [
   },
   {
     name: "Petr Pavel",
-    organization: "Armádní generál Armády České republiky ve výslužbě",
+    role: "Armádní generál Armády České republiky ve výslužbě",
+    organization: ORGANIZATIONS.SPOLUSILNEJSI,
     description:
       "Armádní generál ve výslužbě, bývalý náčelník Generálního štábu Armády České republiky a předseda vojenského výboru NATO. Za své služby získal mnoho českých i mezinárodních vojenských vyznamenání. Dnes se věnuje přednáškám a besedám s občany. Na jaře 2020 založil iniciativu Spolu silnější, nejprve ve formě sbírky, která pomáhá lidem v první linii boje s epidemií a těm, na které krize dopadá nejhůře. Později dal s experty dali dohromady doporučení pro lepší zvládání krizí a nyní usiluje o důkladnou revizi krizového řízení naší země. Snaží se jít příkladem v aktivním občanství a dobrovolnictví.",
     image: speaker["../assets/images/speakers/person_pavel.jpg"].default,

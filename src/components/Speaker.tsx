@@ -31,7 +31,7 @@ const Speaker: Component<{ item: SpeakersInterface; right?: boolean }> = ({
               data-aos={`${right ? "fade-right" : "fade-left"}`}
               data-aos-delay="300"
             >
-              {person.organization}
+              {person.role}
             </span>
             <p
               className="mb-4"
