@@ -89,7 +89,7 @@ const Home: Component = () => {
           </span>
           <div className="flex flex-row">
             <Link
-              className="btn-custom mr-4"
+              className="btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-[100%] mr-4"
               href="/view"
               data-aos="fade-up"
               data-aos-delay="400"
@@ -97,7 +97,7 @@ const Home: Component = () => {
               <span>Sledovat</span>
             </Link>
             <Link
-              className="btn-custom"
+              className="btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-[100%]"
               href="/memorandum"
               data-aos="fade-up"
               data-aos-delay="400"
@@ -156,7 +156,7 @@ const Home: Component = () => {
             {(days, i) => (
               <div className="flex flex-col items-stretch">
                 <h3 className="mt-5 text-2xl">
-                  Den {i() == 0 ? "první" : "druhý"}
+                  Den {i() === 0 ? "první" : "druhý"}
                 </h3>
                 <For each={days}>
                   {(programItem, i) => (

@@ -86,7 +86,7 @@ const Navbar: Component = () => {
                   href="/kontakt"
                   description="Kontakt"
                 />
-                <Link href="/view" className="btn-custom btn-custom-navbar">
+                <Link href="/view" className="btn-custom uppercase text-kyberfestival-green bg-kyberfestival-bg border-solid border-kyberfestival-green border-1  py-1 px-2 inline-block relative hover:before:w-[100%] hover:text-kyberfestival-bg">
                   <span>Sledovat</span>
                 </Link>
               </div>
@@ -96,7 +96,7 @@ const Navbar: Component = () => {
             <a
               onClick={() => setIsOpen(!isOpen())}
               type="button"
-              className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 outline-none "
+              className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 outline-none"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >

@@ -24,8 +24,8 @@ const Speakers: Component = () => {
           updateFilter(e, selected());
           setSelected(!selected());
         }}
-        className={`text-center btn-custom btn-custom-navbar ${
-          selected() ? "btn-selected" : ""
+        className={`btn-custom uppercase text-kyberfestival-green bg-kyberfestival-bg border-solid border-kyberfestival-green border-1 py-1 px-2 inline-block relative hover:before:w-[100%] hover:text-kyberfestival-bg ${
+          selected() ? "text-kyberfestival-bg before:w-[100%]" : ""
         } mr-2 mb-2`}
       >
         <span>{item}</span>
