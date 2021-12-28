@@ -142,11 +142,11 @@ const Home: Component = () => {
             >
               <p>
                 Podrobný plán obou konferenčních dnů v PDF ke stažení{" "}
-                <a href={program} className="text-blue-600 underline">
+                <a href={program} className="text-blue-600 hover:text-blue-800 underline">
                   zde
                 </a>
                 , případně pro mobilní telefony{" "}
-                <a href={programFallback} className="text-blue-600 underline">
+                <a href={programFallback} className="text-blue-600 hover:text-blue-800 underline">
                   HTML verze
                 </a>{" "}
               </p>
