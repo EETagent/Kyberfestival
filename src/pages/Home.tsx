@@ -110,7 +110,7 @@ const Home: Component = () => {
           <div className="flex flex-col md:flex-row mb-5">
             <div className="md:w-1/2" data-aos="fade-up" data-aos-delay="100">
               <div className="text-6xl">
-                <h2>Řečníci</h2>
+                <h2 className="relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-20%]">Řečníci</h2>
               </div>
             </div>
             <div
@@ -132,7 +132,7 @@ const Home: Component = () => {
           <div className="flex flex-col md:flex-row mb-5">
             <div className="md:w-6/10" data-aos="fade-up">
               <div className="text-6xl">
-                <h2>Program konference</h2>
+                <h2 className="relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-14%]">Program konference</h2>
               </div>
             </div>
             <div
@@ -174,7 +174,7 @@ const Home: Component = () => {
           <div className="flex flex-col md:flex-row mb-5">
             <div className="md:w-6/10">
               <div className="text-6xl" data-aos="fade-up">
-                <h2>Partneři</h2>
+                <h2 className="relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-14%]">Partneři</h2>
               </div>
             </div>
             <div

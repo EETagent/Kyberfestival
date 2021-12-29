@@ -39,7 +39,7 @@ const Speakers: Component = () => {
   };
   return (
     <div className="w-8/10 mx-auto mt-15 flex flex-col">
-      <h1 className="text-4xl my-5">Naši řečníci</h1>
+      <h1 className="text-4xl my-5 relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-8%]">Naši řečníci</h1>
       <hr />
       <span className="my-5">Filtruj podle organizace</span>
       <hr />

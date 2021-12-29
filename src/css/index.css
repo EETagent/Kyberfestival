@@ -42,3 +42,7 @@ body {
   position: relative;
   z-index: 2;
 }
+
+.content-blank::after {
+  content: "";
+}

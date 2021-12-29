@@ -6,7 +6,7 @@ const View: Component = () => {
       <div className="w-8/10 h-full mx-auto">
         <div className="flex flex-col items-center md:items-baseline md:text-left">
           <h1
-            className="mt-15 text-2xl md:text-4xl mb-4 text-left"
+            className="mt-15 text-2xl md:text-4xl mb-4 text-left relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-8%]" 
             data-aos="fade-up"
             data-aos-delay="200"
           >
