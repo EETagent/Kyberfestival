@@ -11,7 +11,7 @@ const Contact: Component = () => {
         {" "}
         Kontaktujte nás
       </h1>
-      <hr />
+      <hr className="mt-2" />
       <div className="flex flex-col md:flex-row justify-center my-8">
         <div data-aos="fade-up" className="mr-10 w-full">
           <form
@@ -20,8 +20,8 @@ const Contact: Component = () => {
             data-aos-delay="300"
             action="../../mail/mail.php"
           >
-            <div className="flex flex-row">
-              <div className="flex flex-col w-full mr-2">
+            <div className="flex flex-row justify-between">
+              <div className="flex flex-col w-[48%]">
                 <label className="" for="fname">
                   Jméno
                 </label>
@@ -29,11 +29,11 @@ const Contact: Component = () => {
                   type="text"
                   id="fname"
                   name="forname"
-                  className="border-solid border-kyberfestival-green border-2 py-2"
+                  className="border-solid border-kyberfestival-green border-2 py-2 px-2"
                   required
                 />
               </div>
-              <div className="flex flex-col w-full">
+              <div className="flex flex-col w-1/2">
                 <label className="" for="lname">
                   Přijmení
                 </label>
@@ -41,7 +41,7 @@ const Contact: Component = () => {
                   type="text"
                   id="lname"
                   name="surname"
-                  className="border-solid border-kyberfestival-green border-2 py-2 "
+                  className="border-solid border-kyberfestival-green border-2 py-2 px-2"
                   required
                 />
               </div>
@@ -52,7 +52,7 @@ const Contact: Component = () => {
                 type="email"
                 id="email"
                 name="email"
-                className="border-solid border-kyberfestival-green border-2 py-2 "
+                className="border-solid border-kyberfestival-green border-2 py-2 px-2"
                 required
               />
             </div>
@@ -62,7 +62,7 @@ const Contact: Component = () => {
                 type="subject"
                 id="subject"
                 name="subject"
-                className="border-solid border-kyberfestival-green border-2 py-2 "
+                className="border-solid border-kyberfestival-green border-2 py-2 px-2"
                 required
               />
             </div>
@@ -73,7 +73,7 @@ const Contact: Component = () => {
                 id="message"
                 cols="30"
                 rows="4"
-                className="border-solid border-kyberfestival-green border-2 py-2 "
+                className="border-solid border-kyberfestival-green border-2 py-2 px-2"
                 required
               ></textarea>
             </div>
@@ -87,21 +87,23 @@ const Contact: Component = () => {
             <input type="hidden" id="lang" name="lang" value="cz" required />
           </form>
         </div>
-        <div className="flex flex-col" data-aos="fade-up" data-aos-delay="100">
-          <div className="">
-            <p className="mb-4 font-weight-bold uppercase">Adresa</p>
-            <p className="mb-4">
-              Preslova 72/25, 150 21 Praha 5-Smíchov, Česká republika
-            </p>
-            <p className="mb-4 font-weight-bold uppercase">Telefon</p>
-            <p className="mb-4">==== === === ===</p>
-            <p className="mb-4 font-weight-bold uppercase">E-mailová adresa</p>
-            <p className="mb-4">
-              <a href="mailto:&#105;&#110;&#102;&#111;&#064;&#107;&#121;&#098;&#101;&#114;&#102;&#101;&#115;&#116;&#105;&#118;&#097;&#108;&#046;&#101;&#117;">
-                &#105;&#110;&#102;&#111;&#064;&#107;&#121;&#098;&#101;&#114;&#102;&#101;&#115;&#116;&#105;&#118;&#097;&#108;&#046;&#101;&#117;
-              </a>
-            </p>
-          </div>
+        <div
+          className="flex flex-col mt-8 md:mt-0"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <p className="mb-4 font-weight-bold uppercase">Adresa</p>
+          <p className="mb-4">
+            Preslova 72/25, 150 21 Praha 5-Smíchov, Česká republika
+          </p>
+          <p className="font-weight-bold uppercase">Telefon</p>
+          <p className="my-4">==== === === ===</p>
+          <p className="font-weight-bold uppercase">E-mailová adresa</p>
+          <p className="my-4">
+            <a className="hover:text-blue-800" href="mailto:&#105;&#110;&#102;&#111;&#064;&#107;&#121;&#098;&#101;&#114;&#102;&#101;&#115;&#116;&#105;&#118;&#097;&#108;&#046;&#101;&#117;">
+              &#105;&#110;&#102;&#111;&#064;&#107;&#121;&#098;&#101;&#114;&#102;&#101;&#115;&#116;&#105;&#118;&#097;&#108;&#046;&#101;&#117;
+            </a>
+          </p>
         </div>
       </div>
     </div>
