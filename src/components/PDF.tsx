@@ -1,4 +1,3 @@
-import { Link } from "solid-app-router";
 import { Component } from "solid-js";
 
 const PDF: Component<{ src: string; srcFallback: string }> = ({
