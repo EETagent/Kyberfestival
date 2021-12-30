@@ -39,7 +39,7 @@ export const SPEAKERS: SpeakersInterface[] = [
 
   {
     name: "Vojtěch Jungmann",
-    role: "Student druhého ročníku oboru kybernetická bezpečnostKoordinátor konference",
+    role: "Student druhého ročníku oboru kybernetická bezpečnost. Koordinátor konference",
     organization: ORGANIZATIONS.SSPS,
     description:
       "Zajímá se o kybernetickou bezpečnost a programování, 3. místo v národním finále kybernetické soutěže, hlavní koordinátor konference.",

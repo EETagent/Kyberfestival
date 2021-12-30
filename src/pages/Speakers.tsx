@@ -29,9 +29,9 @@ const Speakers: Component = () => {
         onclick={(e) => {
           updateFilter(e, selected());
         }}
-        className={`btn-custom uppercase text-kyberfestival-green bg-kyberfestival-bg border-solid border-kyberfestival-green border-1 py-1 px-2 inline-block relative hover:before:w-[100%] hover:text-kyberfestival-bg ${
+        className={`btn-custom xl:text-xl uppercase text-kyberfestival-green bg-kyberfestival-bg border-solid border-kyberfestival-green border-1 py-1 px-2 inline-block relative hover:before:w-[100%] hover:text-kyberfestival-bg ${
           selected() ? "text-kyberfestival-bg before:w-[100%]" : ""
-        } my-2 mr-2 mb-2`}
+        } my-2 xl:my-4 mr-2 xl:mr-4`}
       >
         <span>{item}</span>
       </button>
@@ -39,7 +39,7 @@ const Speakers: Component = () => {
   };
   return (
     <div className="w-8/10 mx-auto mt-15 flex flex-col">
-      <h1 className="text-4xl my-5 relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-8%]">Naši řečníci</h1>
+      <h1 className="text-4xl xl:text-6xl my-5 relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-5%] xl:after:w-40">Naši řečníci</h1>
       <hr />
       <span className="my-5">Filtruj podle organizace</span>
       <hr />

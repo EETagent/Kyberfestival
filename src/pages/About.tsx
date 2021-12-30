@@ -14,9 +14,9 @@ const About: Component = () => {
     <>
       <div className="w-8/10 mx-auto mt-15">
         <div className="flex flex-col md:flex-row mb-5">
-          <div className="md:w-4/10 lg:w-3/10">
+          <div className="md:w-4/10 lg:w-3/10 xl:w-[35%]">
             <div
-              className='font-bold text-4xl relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-20%]'
+              className='font-bold text-4xl xl:text-6xl relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40'
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -232,8 +232,8 @@ const About: Component = () => {
                         />
                       </picture>
                     </figure>
-                    <blockquote className="mt-3">
-                      <p className="mb-0">{speaker.name}</p>
+                    <blockquote className="mt-5">
+                      <p className="mb-0 font-bold">{speaker.name}</p>
                       <p className="mb-4 text-sm">{speaker.organization}</p>
                     </blockquote>
                   </div>

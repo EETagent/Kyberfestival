@@ -20,21 +20,21 @@ const Speaker: Component<{ item: SpeakersInterface; right?: boolean }> = ({
         <div className={`md:w-1/2 ml-auto ${right ? "md:order-1" : ""}`}>
           <div className={`bio ${right ? "md:pr-lg-5" : "md:pl-lg-5"}`}>
             <h2
-              className="block mb-4 text-2xl"
+              className="mb-4 text-2xl xl:text-4xl block"
               data-aos={`${right ? "fade-right" : "fade-left"}`}
               data-aos-delay="200"
             >
               {person.name}
             </h2>
             <span
-              className="uppercase block mb-3"
+              className="mb-4 xl:text-2xl uppercase block "
               data-aos={`${right ? "fade-right" : "fade-left"}`}
               data-aos-delay="300"
             >
               {person.role}
             </span>
             <p
-              className="mb-4"
+              className="mb-4 xl:text-xl"
               data-aos={`${right ? "fade-right" : "fade-left"}`}
               data-aos-delay="400"
             >
@@ -49,16 +49,16 @@ const Speaker: Component<{ item: SpeakersInterface; right?: boolean }> = ({
                 <Show when={person.social!.web}>
                   <a
                     href={person.social!.web}
-                    className="p-2 fab fa-firefox-browser"
+                    className="p-2 fab fa-firefox-browser hover:text-blue-800"
                   ></a>
                 </Show>
                 <Show when={person.social!.twitter}>
-                  <a href={person.social!.twitter} className="p-2 fab fa-twitter"></a>
+                  <a href={person.social!.twitter} className="p-2 fab fa-twitter hover:text-blue-800"></a>
                 </Show>
                 <Show when={person.social!.facebook}>
                   <a
                     href={person.social!.facebook}
-                    className="p-2 fab fa-facebook"
+                    className="p-2 fab fa-facebook hover:text-blue-800"
                   ></a>
                 </Show>
               </p>

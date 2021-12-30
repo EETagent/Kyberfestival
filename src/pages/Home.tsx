@@ -28,12 +28,12 @@ const Program: Component<{
       data-aos-delay="400"
     >
       <div className="flex flex-row items-stretch my-4">
-        <div className="w-1/4  mb-3 md:md-0">
-          <span className="text-bold text-2xl">{item.start}</span>{" "}
+        <div className="w-1/4 mb-3 md:md-0">
+          <span className="text-bold text-2xl xl:text-4xl">{item.start}</span>{" "}
           <span>{item.end}</span>
         </div>
         <div className="w-3/4">
-          <h2 className="">{item.text}</h2>
+          <h2 className="xl:text-2xl">{item.text}</h2>
         </div>
       </div>
     </div>
@@ -62,34 +62,34 @@ const Home: Component = () => {
     <>
       <div className="w-8/10 mx-auto">
         <div id="tsparticles" className="absolute h-screen"></div>
-        <div className="mt-20 h-[80vh] flex flex-col  items-center md:items-baseline">
+        <div className="mt-20 xl:mt-40 h-[80vh] flex flex-col  items-center md:items-baseline">
           <span
-            className="mb-3 md:text-2xl"
+            className="mb-5 text-center xl:mb-10 md:text-2xl xl:text-4xl"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             Konference kybernetické bezpečnosti
           </span>
           <h1
-            className="mb-4 text-4xl md:text-7xl font-bold"
+            className="mb-5 text-center md:text-left xl:mb-10 text-4xl xl:text-8xl md:text-7xl font-bold"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             Kyberfestival 2021
           </h1>
           <span
-            className="font-bold mb-3 text-2xl"
+            className="mb-5 xl:mb-10 font-bold text-2xl xl:text-4xl"
             data-aos="fade-up"
             data-aos-delay="300"
           >
             Celetná 13, Staré město
           </span>
-          <span className="mb-5 text-2xl" data-aos="fade-up" data-aos-delay="300">
+          <span className="mb-5 xl:mb-10 text-2xl xl:text-4xl" data-aos="fade-up" data-aos-delay="300">
             21.6.-22.6.
           </span>
           <div className="flex flex-row">
             <Link
-              className="btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-[100%] mr-4"
+              className="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-[100%] mr-4"
               href="/view"
               data-aos="fade-up"
               data-aos-delay="400"
@@ -97,7 +97,7 @@ const Home: Component = () => {
               <span>Sledovat</span>
             </Link>
             <Link
-              className="btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-[100%]"
+              className="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-[100%]"
               href="/memorandum"
               data-aos="fade-up"
               data-aos-delay="400"
@@ -110,7 +110,7 @@ const Home: Component = () => {
           <div className="flex flex-col md:flex-row mb-5">
             <div className="md:w-1/2" data-aos="fade-up" data-aos-delay="100">
               <div className="text-6xl">
-                <h2 className="relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-20%]">Řečníci</h2>
+                <h2 className="relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">Řečníci</h2>
               </div>
             </div>
             <div
@@ -132,7 +132,7 @@ const Home: Component = () => {
           <div className="flex flex-col md:flex-row mb-5">
             <div className="md:w-6/10" data-aos="fade-up">
               <div className="text-6xl">
-                <h2 className="relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-14%]">Program konference</h2>
+                <h2 className="relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">Program konference</h2>
               </div>
             </div>
             <div
@@ -155,7 +155,7 @@ const Home: Component = () => {
           <For each={PROGRAM}>
             {(days, i) => (
               <div className="flex flex-col items-stretch">
-                <h3 className="mt-5 text-2xl">
+                <h3 className="mt-5 text-2xl xl:text-4xl">
                   Den {i() === 0 ? "první" : "druhý"}
                 </h3>
                 <For each={days}>
@@ -174,7 +174,7 @@ const Home: Component = () => {
           <div className="flex flex-col md:flex-row mb-5">
             <div className="md:w-6/10">
               <div className="text-6xl" data-aos="fade-up">
-                <h2 className="relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-14%]">Partneři</h2>
+                <h2 className="relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">Partneři</h2>
               </div>
             </div>
             <div
