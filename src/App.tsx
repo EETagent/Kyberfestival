@@ -9,6 +9,7 @@ const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Speakers = lazy(() => import("./pages/Speakers"));
 const View = lazy(() => import("./pages/View"));
+const Contact = lazy(() => import("./pages/Contact"));
 const Countdown = lazy(() => import("./pages/Countdown"));
 
 import memorandum from "./assets/documents/memorandum.pdf";
@@ -27,12 +28,14 @@ const App: Component = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/view" element={<View />} />
-        <Route path="/speakers" element={<Speakers />} />
-        <Route path="/countdown" element={<Countdown />} />
         <Route path="/program" element={<PDF src={program} srcFallback={memorandumFallback} />} />
-        <Route path="/memorandum" element={<PDF src={memorandum} srcFallback={programFallback}/>} />
+        <Route path="/speakers" element={<Speakers />} />
         <Route path="/tiskovazprava" element={<PDF src={tiskovazprava} srcFallback={tiskovazpravaFallback}/>} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/view" element={<View />} />
+        <Route path="/memorandum" element={<PDF src={memorandum} srcFallback={programFallback}/>} />
+
+        <Route path="/countdown" element={<Countdown />} />
         {/* <Route path="/*all" element={<NotFound />} /> */}
       </Routes>
     </>

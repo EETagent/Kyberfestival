@@ -98,7 +98,7 @@ const Navbar: Component = () => {
 
                 <MenuItem href="/tiskovazprava" description="Tisková zpráva" />
 
-                <MenuItem href="/kontakt" description="Kontakt" />
+                <MenuItem href="/contact" description="Kontakt" />
                 <Link
                   href="/view"
                   className="btn-custom uppercase text-kyberfestival-green bg-kyberfestival-bg border-solid border-kyberfestival-green border-1  py-1 px-2 inline-block relative hover:before:w-[100%] hover:text-kyberfestival-bg"
@@ -159,7 +159,7 @@ const Navbar: Component = () => {
               />
               <MenuItemCompact
                 onClick={() => setIsOpened(!isOpened())}
-                href="/tiskovazprava"
+                href="/contact"
                 description="Kontakt"
               />
 
