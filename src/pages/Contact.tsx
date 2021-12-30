@@ -13,7 +13,7 @@ const Contact: Component = () => {
       </h1>
       <hr />
       <div className="flex flex-col md:flex-row justify-center my-8">
-        <div data-aos="fade-up" className="mr-10">
+        <div data-aos="fade-up" className="mr-10 w-full">
           <form
             id="contact-form"
             data-aos="fade-up"
@@ -21,7 +21,7 @@ const Contact: Component = () => {
             action="../../mail/mail.php"
           >
             <div className="flex flex-row">
-              <div className="flex flex-col mr-2">
+              <div className="flex flex-col w-full mr-2">
                 <label className="" for="fname">
                   Jméno
                 </label>
@@ -29,11 +29,11 @@ const Contact: Component = () => {
                   type="text"
                   id="fname"
                   name="forname"
-                  className="w-full border-solid border-kyberfestival-green border-2 py-2"
+                  className="border-solid border-kyberfestival-green border-2 py-2"
                   required
                 />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col w-full">
                 <label className="" for="lname">
                   Přijmení
                 </label>
@@ -41,12 +41,12 @@ const Contact: Component = () => {
                   type="text"
                   id="lname"
                   name="surname"
-                  className="w-full border-solid border-kyberfestival-green border-2 py-2 "
+                  className="border-solid border-kyberfestival-green border-2 py-2 "
                   required
                 />
               </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col w-full">
               <label for="email">E-mail</label>
               <input
                 type="email"
@@ -56,7 +56,7 @@ const Contact: Component = () => {
                 required
               />
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col w-full">
               <label for="subject">Předmět</label>
               <input
                 type="subject"
@@ -66,13 +66,13 @@ const Contact: Component = () => {
                 required
               />
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col w-full">
               <label for="message">Zpráva</label>
               <textarea
                 name="body"
                 id="message"
                 cols="30"
-                rows="7"
+                rows="4"
                 className="border-solid border-kyberfestival-green border-2 py-2 "
                 required
               ></textarea>
