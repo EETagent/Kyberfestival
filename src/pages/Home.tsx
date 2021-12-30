@@ -136,7 +136,7 @@ const Home: Component = () => {
               </div>
             </div>
             <div
-              className="md:w-4/10 mt-5 md:pl-5"
+              className="md:w-4/10 mt-10 md:pl-5"
               data-aos="fade-up"
               data-aos-delay="100"
             >

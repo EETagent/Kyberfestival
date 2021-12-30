@@ -24,7 +24,7 @@ const About: Component = () => {
             </div>
           </div>
           <div
-            className="md:w-6/10 lg:w-7/10 mt-5 md:pl-5"
+            className="md:w-6/10 lg:w-7/10 mt-10 md:pl-5"
             data-aos="fade-up"
             data-aos-delay="200"
           >
