@@ -40,9 +40,9 @@ const Speakers: Component = () => {
   return (
     <div className="w-8/10 mx-auto mt-15 flex flex-col">
       <h1 className="text-4xl xl:text-6xl my-5 relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-5%] xl:after:w-40">Naši řečníci</h1>
-      <hr />
+      <hr className="mt-2" />
       <span className="my-5">Filtruj podle organizace</span>
-      <hr />
+      <hr className="mt-2" />
       <div className="flex flex-row flex-wrap mb-10">
         <For
           each={Array.from(
