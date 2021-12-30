@@ -54,7 +54,7 @@ const MenuItem: Component<{
   return (
     <Link
       href={href}
-      className={`whitespace-nowrap text-gray text-gray-600 hover:text-gray-800 px-3 py-2 mr-4 rounded-md text-sm uppercase ${"no-underline"}`}
+      className={`whitespace-nowrap text-gray text-gray-600 hover:text-gray-800 py-2 mx-4 rounded-md text-sm uppercase ${"no-underline"}`}
     >
       {description}
     </Link>
@@ -99,9 +99,14 @@ const Navbar: Component = () => {
                 <MenuItem href="/tiskovazprava" description="Tisková zpráva" />
 
                 <MenuItem href="/contact" description="Kontakt" />
+                <div className="inline-block mx-4">
+                    <Link href="/">🇨🇿</Link>
+                    <span>|</span>
+                    <Link href="/">🇬🇧</Link>
+                </div>
                 <Link
                   href="/view"
-                  className="btn-custom uppercase text-kyberfestival-green bg-kyberfestival-bg border-solid border-kyberfestival-green border-1  py-1 px-2 inline-block relative hover:before:w-[100%] hover:text-kyberfestival-bg"
+                  className="btn-custom uppercase text-kyberfestival-green bg-kyberfestival-bg border-solid border-kyberfestival-green border-1 py-1 px-2 mx-4 inline-block relative hover:before:w-[100%] hover:text-kyberfestival-bg"
                 >
                   <span>Sledovat</span>
                 </Link>
