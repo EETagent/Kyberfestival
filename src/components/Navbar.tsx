@@ -1,4 +1,4 @@
-import Link from "solid-app-router";
+import { Link } from "solid-app-router";
 import { Accessor, Component, createSignal } from "solid-js";
 import { Transition } from "solid-transition-group";
 
