@@ -1,3 +1,5 @@
+import plugin from "windicss/plugin";
+
 export default {
   theme: {
     extend: {
@@ -7,4 +9,20 @@ export default {
       },
     },
   },
+  plugins: [
+    plugin(({ addVariant }) => {
+      addVariant("not-focus", ({ modifySelectors }) => {
+        return modifySelectors(({ className }) => {
+          return `.${className}:not(:focus)`;
+        });
+      });
+    }),
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        ".content-blank": {
+          content: '""',
+        },
+      });
+    }),
+  ],
 };
