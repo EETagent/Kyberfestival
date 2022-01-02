@@ -29,7 +29,7 @@ const Speakers: Component = () => {
         onclick={(e) => {
           updateFilter(e, selected());
         }}
-        className={`btn-custom xl:text-xl uppercase text-kyberfestival-green bg-kyberfestival-bg border-solid border-kyberfestival-green border-1 py-1 px-2 inline-block relative hover:before:w-[100%] hover:text-kyberfestival-bg ${
+        className={`btn-custom xl:text-xl uppercase text-kyberfestival-green bg-kyberfestival-bg border-solid border-kyberfestival-green border-1 py-1 px-2 inline-block relative btn-custom-hover-not-focus ${
           selected() ? "text-kyberfestival-bg before:w-[100%]" : ""
         } my-2 xl:my-4 mr-2 xl:mr-4`}
       >
