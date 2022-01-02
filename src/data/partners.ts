@@ -29,7 +29,7 @@ export const PARTNERS: PartnersInterface[] = [
   },
   {
     organization: "Centrum kybernetické bezpečnosti",
-    website: "https://pedf.cuni.cz",
+    website: "https://www.kybercentrum.cz",
     logo: logo["../assets/images/partners/logo_kybercentrum.png"].default,
     logoAVIF: logoAVIF["../assets/images/avif/partners/logo_kybercentrum.avif"].default,
   },
