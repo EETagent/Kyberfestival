@@ -42,14 +42,3 @@ body {
   position: relative;
   z-index: 2;
 }
-
-.content-blank::after {
-  content: "";
-}
-
-.btn-custom-hover-not-focus:hover:not(:focus) {
-  color: #f6f5f5;
-}
-.btn-custom-hover-not-focus:hover:not(:focus)::before {
-  width: 100%;
-}

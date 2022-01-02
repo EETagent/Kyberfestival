@@ -89,7 +89,7 @@ const Home: Component = () => {
           </span>
           <div className="flex flex-row">
             <Link
-              className="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-[100%] mr-4"
+              className="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-full mr-4"
               href="/view"
               data-aos="fade-up"
               data-aos-delay="400"
@@ -97,7 +97,7 @@ const Home: Component = () => {
               <span>Sledovat</span>
             </Link>
             <Link
-              className="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-[100%]"
+              className="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-full"
               href="/memorandum"
               data-aos="fade-up"
               data-aos-delay="400"
@@ -110,7 +110,7 @@ const Home: Component = () => {
           <div className="flex flex-col md:flex-row mb-5">
             <div className="md:w-1/2" data-aos="fade-up" data-aos-delay="100">
               <div className="text-6xl">
-                <h2 className="relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">Řečníci</h2>
+                <h2 className="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">Řečníci</h2>
               </div>
             </div>
             <div
@@ -132,7 +132,7 @@ const Home: Component = () => {
           <div className="flex flex-col md:flex-row mb-5">
             <div className="md:w-6/10" data-aos="fade-up">
               <div className="text-6xl">
-                <h2 className="relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">Program konference</h2>
+                <h2 className="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">Program konference</h2>
               </div>
             </div>
             <div
@@ -174,7 +174,7 @@ const Home: Component = () => {
           <div className="flex flex-col md:flex-row mb-5">
             <div className="md:w-6/10">
               <div className="text-6xl" data-aos="fade-up">
-                <h2 className="relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">Partneři</h2>
+                <h2 className="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">Partneři</h2>
               </div>
             </div>
             <div

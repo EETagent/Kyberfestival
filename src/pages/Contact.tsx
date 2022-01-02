@@ -4,7 +4,7 @@ const Contact: Component = () => {
   return (
     <div className="w-8/10 mx-auto mt-15 flex flex-col">
       <h1
-        className="text-2xl  md:text-4xl xl:text-6xl mb-4 text-left relative content-blank after:(top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-5%] xl:after:w-40"
+        className="text-2xl  md:text-4xl xl:text-6xl mb-4 text-left relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-5%] xl:after:w-40"
         data-aos="fade-up"
         data-aos-delay="200"
       >

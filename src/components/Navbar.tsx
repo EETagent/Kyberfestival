@@ -1,5 +1,5 @@
-import { Link, NavLink, useNavigate } from "solid-app-router";
-import { Accessor, Component, createSignal, on, Show } from "solid-js";
+import Link from "solid-app-router";
+import { Accessor, Component, createSignal } from "solid-js";
 import { Transition } from "solid-transition-group";
 
 import logo from "../assets/images/logo.png";
@@ -70,7 +70,7 @@ const MenuItemCompact: Component<{
     <Link
       onClick={onClick}
       href={href}
-      className="text-kyberfestival-green hover:bg-kyberfestival-green hover:text-white block mx-10 px-3 py-2 rounded-md text-base  uppercase"
+      className="text-kyberfestival-green hover:bg-kyberfestival-green hover:text-white block mx-10 px-3 py-2 rounded-md text-base uppercase"
     >
       {description}
     </Link>
@@ -106,7 +106,7 @@ const Navbar: Component = () => {
                 </div>
                 <Link
                   href="/view"
-                  className="btn-custom uppercase text-kyberfestival-green bg-kyberfestival-bg border-solid border-kyberfestival-green border-1 py-1 px-2 mx-4 inline-block relative hover:before:w-[100%] hover:text-kyberfestival-bg"
+                  className="btn-custom uppercase text-kyberfestival-green bg-kyberfestival-bg border-solid border-kyberfestival-green border-1 py-1 px-2 mx-4 inline-block relative hover:before:w-full hover:text-kyberfestival-bg"
                 >
                   <span>Sledovat</span>
                 </Link>
