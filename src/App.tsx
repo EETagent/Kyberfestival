@@ -4,6 +4,7 @@ import { lazy } from "solid-js";
 import { Routes, Route } from "solid-app-router";
 
 import Navbar from "./components/Navbar";
+import Copyright from "./components/Copyright";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -23,22 +24,40 @@ const PDF = lazy(() => import("./components/PDF"));
 
 const App: Component = () => {
   return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/program" element={<PDF src={program} srcFallback={memorandumFallback} />} />
-        <Route path="/speakers" element={<Speakers />} />
-        <Route path="/tiskovazprava" element={<PDF src={tiskovazprava} srcFallback={tiskovazpravaFallback}/>} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/view" element={<View />} />
-        <Route path="/memorandum" element={<PDF src={memorandum} srcFallback={programFallback}/>} />
+    <div className="flex flex-col h-screen">
+      <header>
+        <Navbar />
+      </header>
+      <main className="flex-1 flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route
+            path="/program"
+            element={<PDF src={program} srcFallback={memorandumFallback} />}
+          />
+          <Route path="/speakers" element={<Speakers />} />
+          <Route
+            path="/tiskovazprava"
+            element={
+              <PDF src={tiskovazprava} srcFallback={tiskovazpravaFallback} />
+            }
+          />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/view" element={<View />} />
+          <Route
+            path="/memorandum"
+            element={<PDF src={memorandum} srcFallback={programFallback} />}
+          />
 
-        <Route path="/countdown" element={<Countdown />} />
-        {/* <Route path="/*all" element={<NotFound />} /> */}
-      </Routes>
-    </>
+          <Route path="/countdown" element={<Countdown />} />
+          {/* <Route path="/*all" element={<NotFound />} /> */}
+        </Routes>
+      </main>
+      <footer>
+        <Copyright />
+      </footer>
+    </div>
   );
 };
 
