@@ -4,7 +4,8 @@ import { ProgramInterface, PROGRAM } from "../data/program";
 import { SPEAKERS } from "../data/speakers";
 import { Partners } from "../components/Partners";
 
-import { Container, tsParticles } from "tsparticles";
+import { loadSlim } from "tsparticles-slim";
+import { Container, tsParticles } from "tsparticles-engine";
 
 import { Link } from "solid-app-router";
 
@@ -52,6 +53,7 @@ const Home: Component = () => {
   });
 
   onMount(() => {
+    loadSlim(tsParticles);
     tsParticles.load("tsparticles", PARTICLES).then(() => {
       setParticles(tsParticles.domItem(0));
       particles()?.play();
@@ -84,7 +86,11 @@ const Home: Component = () => {
           >
             Celetná 13, Staré město
           </span>
-          <span className="mb-5 xl:mb-10 text-2xl xl:text-4xl" data-aos="fade-up" data-aos-delay="300">
+          <span
+            className="mb-5 xl:mb-10 text-2xl xl:text-4xl"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             21.6.-22.6.
           </span>
           <div className="flex flex-row">
@@ -110,7 +116,9 @@ const Home: Component = () => {
           <div className="flex flex-col md:flex-row mb-5">
             <div className="md:w-1/2" data-aos="fade-up" data-aos-delay="100">
               <div className="text-6xl">
-                <h2 className="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">Řečníci</h2>
+                <h2 className="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">
+                  Řečníci
+                </h2>
               </div>
             </div>
             <div
@@ -132,7 +140,9 @@ const Home: Component = () => {
           <div className="flex flex-col md:flex-row mb-5">
             <div className="md:w-6/10" data-aos="fade-up">
               <div className="text-6xl">
-                <h2 className="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">Program konference</h2>
+                <h2 className="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">
+                  Program konference
+                </h2>
               </div>
             </div>
             <div
@@ -142,11 +152,17 @@ const Home: Component = () => {
             >
               <p>
                 Podrobný plán obou konferenčních dnů v PDF ke stažení{" "}
-                <a href={program} className="text-blue-600 hover:text-blue-800 underline">
+                <a
+                  href={program}
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
                   zde
                 </a>
                 , případně pro mobilní telefony{" "}
-                <a href={programFallback} className="text-blue-600 hover:text-blue-800 underline">
+                <a
+                  href={programFallback}
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
                   HTML verze
                 </a>{" "}
               </p>
@@ -174,7 +190,9 @@ const Home: Component = () => {
           <div className="flex flex-col md:flex-row mb-5">
             <div className="md:w-6/10">
               <div className="text-6xl" data-aos="fade-up">
-                <h2 className="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">Partneři</h2>
+                <h2 className="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">
+                  Partneři
+                </h2>
               </div>
             </div>
             <div
