@@ -19,7 +19,8 @@
     "vite": "^2.9.5",
     "vite-plugin-solid": "^2.2.6",
     "vite-plugin-windicss": "^1.8.4",
-    "windicss": "^3.5.1"
+    "windicss": "^3.5.1",
+    "typescript": "^4.6.4"
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
