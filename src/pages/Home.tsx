@@ -79,7 +79,7 @@ const Home: Component = () => {
             Kyberfestival 2021
           </h1>
           <span
-            class="mb-5 xl:mb-10 font-bold text-2xl xl:text-4xl"
+            class="text-center md:text-left mb-5 xl:mb-10 font-bold text-2xl xl:text-4xl"
             data-aos="fade-up"
             data-aos-delay="300"
           >
