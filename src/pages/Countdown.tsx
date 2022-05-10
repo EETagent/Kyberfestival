@@ -27,7 +27,15 @@ const Countdown: Component = () => {
             <h1 className="mx-10 text-5xl font-extrabold tracking-tighter uppercase ">
               Odpočet vypršel 🎉
             </h1>
-            <span className="mt-5">Záznamy z konference naleznete <Link className="text-blue-400 hover:text-blue-500 underline" href="/view">zde</Link></span>
+            <span className="mt-5">
+              Záznamy z konference naleznete{" "}
+              <Link
+                className="text-blue-400 hover:text-blue-500 underline"
+                href="/view"
+              >
+                zde
+              </Link>
+            </span>
           </div>
         }
       >

@@ -1,6 +1,7 @@
 import { IOptions, RecursivePartial, SingleOrMultiple } from "tsparticles";
 
-const PARTICLES: SingleOrMultiple<RecursivePartial<IOptions>> = { particles: {
+const PARTICLES: SingleOrMultiple<RecursivePartial<IOptions>> = {
+  particles: {
     number: {
       value: 65,
       density: {

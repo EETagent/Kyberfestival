@@ -100,9 +100,9 @@ const Navbar: Component = () => {
 
                 <MenuItem href="/contact" description="Kontakt" />
                 <div className="inline-block mx-4">
-                    <Link href="/">🇨🇿</Link>
-                    <span>|</span>
-                    <Link href="/">🇬🇧</Link>
+                  <Link href="/">🇨🇿</Link>
+                  <span>|</span>
+                  <Link href="/">🇬🇧</Link>
                 </div>
                 <Link
                   href="/view"
