@@ -61,8 +61,9 @@ const Speakers: Component = () => {
         each={
           filtered().has("VŠECHNO")
             ? SPEAKERS
-            : 
-            SPEAKERS.filter((speaker) => filtered().has(speaker.organization.toString()))
+            : SPEAKERS.filter((speaker) =>
+                filtered().has(speaker.organization.toString())
+              )
         }
       >
         {(item, i) => (
