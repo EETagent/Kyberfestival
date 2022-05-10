@@ -5,10 +5,17 @@
     "dev": "vite",
     "start": "npm run dev",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+    "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
     "@types/aos": "^3.0.4",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "eslint": "^8.15.0",
+    "eslint-plugin-solid": "^0.4.7",
+    "prettier": "^2.6.2",
     "vite": "^2.9.5",
     "vite-plugin-solid": "^2.2.6",
     "vite-plugin-windicss": "^1.8.4",
