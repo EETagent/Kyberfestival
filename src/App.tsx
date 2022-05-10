@@ -24,11 +24,11 @@ const PDF = lazy(() => import("./components/PDF"));
 
 const App: Component = () => {
   return (
-    <div className="flex flex-col h-screen">
+    <div class="flex flex-col h-screen">
       <header>
         <Navbar />
       </header>
-      <main className="flex-1 flex-grow">
+      <main class="flex-1 flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

@@ -19,22 +19,22 @@ import programFallback from "../assets/documents/program.html?url";
 const Program: Component<{
   item: ProgramInterface;
   borderTop?: boolean;
-}> = ({ item, borderTop }) => {
+}> = (props) => {
   return (
     <div
-      className={`w-full py-5 border-gray-400 border-b-1 ${
-        borderTop ? "border-t-1" : ""
+      class={`w-full py-5 border-gray-400 border-b-1 ${
+        props.borderTop ? "border-t-1" : ""
       }`}
       data-aos="fade"
       data-aos-delay="400"
     >
-      <div className="flex flex-row items-stretch my-4">
-        <div className="w-1/4 mb-3 md:md-0">
-          <span className="text-bold text-2xl xl:text-4xl">{item.start}</span>{" "}
-          <span>{item.end}</span>
+      <div class="flex flex-row items-stretch my-4">
+        <div class="w-1/4 mb-3 md:md-0">
+          <span class="text-bold text-2xl xl:text-4xl">{props.item.start}</span>{" "}
+          <span>{props.item.end}</span>
         </div>
-        <div className="w-3/4">
-          <h2 className="xl:text-2xl">{item.text}</h2>
+        <div class="w-3/4">
+          <h2 class="xl:text-2xl">{props.item.text}</h2>
         </div>
       </div>
     </div>
@@ -42,60 +42,59 @@ const Program: Component<{
 };
 
 const Home: Component = () => {
-  const SABLIK = SPEAKERS.find((e) => e.name === "Radko Sáblík")!;
-  const REHKA = SPEAKERS.find((e) => e.name === "Karel Řehka")!;
-  const PAVEL = SPEAKERS.find((e) => e.name === "Petr Pavel")!;
+  const SABLIK = SPEAKERS.find((e) => e.name === "Radko Sáblík");
+  const REHKA = SPEAKERS.find((e) => e.name === "Karel Řehka");
+  const PAVEL = SPEAKERS.find((e) => e.name === "Petr Pavel");
 
   const [particles, setParticles] = createSignal<Container>();
 
   onCleanup(() => {
-    particles()!.destroy();
+    particles()?.destroy();
   });
 
-  onMount(() => {
+  onMount(async () => {
     loadSlim(tsParticles);
-    tsParticles.load("tsparticles", PARTICLES).then(() => {
-      setParticles(tsParticles.domItem(0));
-      particles()?.play();
-    });
+    await tsParticles.load("tsparticles", PARTICLES);
+    setParticles(tsParticles.domItem(0));
+    particles()?.play();
   });
 
   return (
     <>
-      <div className="w-8/10 mx-auto">
-        <div id="tsparticles" className="absolute h-screen"></div>
-        <div className="mt-20 xl:mt-40 h-[80vh] flex flex-col  items-center md:items-baseline">
+      <div class="w-8/10 mx-auto">
+        <div id="tsparticles" class="absolute h-screen"></div>
+        <div class="mt-20 xl:mt-40 h-[80vh] flex flex-col  items-center md:items-baseline">
           <span
-            className="mb-5 text-center xl:mb-10 md:text-2xl xl:text-4xl"
+            class="mb-5 text-center xl:mb-10 md:text-2xl xl:text-4xl"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             Konference kybernetické bezpečnosti
           </span>
           <h1
-            className="mb-5 text-center md:text-left xl:mb-10 text-4xl xl:text-8xl md:text-7xl font-bold"
+            class="mb-5 text-center md:text-left xl:mb-10 text-4xl xl:text-8xl md:text-7xl font-bold"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             Kyberfestival 2021
           </h1>
           <span
-            className="mb-5 xl:mb-10 font-bold text-2xl xl:text-4xl"
+            class="mb-5 xl:mb-10 font-bold text-2xl xl:text-4xl"
             data-aos="fade-up"
             data-aos-delay="300"
           >
             Celetná 13, Staré město
           </span>
           <span
-            className="mb-5 xl:mb-10 text-2xl xl:text-4xl"
+            class="mb-5 xl:mb-10 text-2xl xl:text-4xl"
             data-aos="fade-up"
             data-aos-delay="300"
           >
             21.6.-22.6.
           </span>
-          <div className="flex flex-row">
+          <div class="flex flex-row">
             <Link
-              className="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-full mr-4"
+              class="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-full mr-4"
               href="/view"
               data-aos="fade-up"
               data-aos-delay="400"
@@ -103,7 +102,7 @@ const Home: Component = () => {
               <span>Sledovat</span>
             </Link>
             <Link
-              className="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-full"
+              class="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-full"
               href="/memorandum"
               data-aos="fade-up"
               data-aos-delay="400"
@@ -112,17 +111,17 @@ const Home: Component = () => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col">
-          <div className="flex flex-col md:flex-row mb-5">
-            <div className="md:w-1/2" data-aos="fade-up" data-aos-delay="100">
-              <div className="text-6xl">
-                <h2 className="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">
+        <div class="flex flex-col">
+          <div class="flex flex-col md:flex-row mb-5">
+            <div class="md:w-1/2" data-aos="fade-up" data-aos-delay="100">
+              <div class="text-6xl">
+                <h2 class="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">
                   Řečníci
                 </h2>
               </div>
             </div>
             <div
-              className="md:w-1/2 mt-5 md:pl-5"
+              class="md:w-1/2 mt-5 md:pl-5"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -136,17 +135,17 @@ const Home: Component = () => {
           <Speaker right={true} item={REHKA}></Speaker>
           <Speaker right={false} item={PAVEL}></Speaker>
         </div>
-        <div className="flex flex-col my-15">
-          <div className="flex flex-col md:flex-row mb-5">
-            <div className="md:w-6/10" data-aos="fade-up">
-              <div className="text-6xl">
-                <h2 className="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">
+        <div class="flex flex-col my-15">
+          <div class="flex flex-col md:flex-row mb-5">
+            <div class="md:w-6/10" data-aos="fade-up">
+              <div class="text-6xl">
+                <h2 class="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">
                   Program konference
                 </h2>
               </div>
             </div>
             <div
-              className="md:w-4/10 mt-10 md:pl-5"
+              class="md:w-4/10 mt-10 md:pl-5"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -154,14 +153,14 @@ const Home: Component = () => {
                 Podrobný plán obou konferenčních dnů v PDF ke stažení{" "}
                 <a
                   href={program}
-                  className="text-blue-600 hover:text-blue-800 underline"
+                  class="text-blue-600 hover:text-blue-800 underline"
                 >
                   zde
                 </a>
                 , případně pro mobilní telefony{" "}
                 <a
                   href={programFallback}
-                  className="text-blue-600 hover:text-blue-800 underline"
+                  class="text-blue-600 hover:text-blue-800 underline"
                 >
                   HTML verze
                 </a>{" "}
@@ -170,8 +169,8 @@ const Home: Component = () => {
           </div>
           <For each={PROGRAM}>
             {(days, i) => (
-              <div className="flex flex-col items-stretch">
-                <h3 className="mt-5 text-2xl xl:text-4xl">
+              <div class="flex flex-col items-stretch">
+                <h3 class="mt-5 text-2xl xl:text-4xl">
                   Den {i() === 0 ? "první" : "druhý"}
                 </h3>
                 <For each={days}>
@@ -186,17 +185,17 @@ const Home: Component = () => {
             )}
           </For>
         </div>
-        <div className="flex flex-col">
-          <div className="flex flex-col md:flex-row mb-5">
-            <div className="md:w-6/10">
-              <div className="text-6xl" data-aos="fade-up">
-                <h2 className="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">
+        <div class="flex flex-col">
+          <div class="flex flex-col md:flex-row mb-5">
+            <div class="md:w-6/10">
+              <div class="text-6xl" data-aos="fade-up">
+                <h2 class="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">
                   Partneři
                 </h2>
               </div>
             </div>
             <div
-              className="md:w-4/10 mt-5 md:pl-5"
+              class="md:w-4/10 mt-5 md:pl-5"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -207,10 +206,10 @@ const Home: Component = () => {
               </p>
             </div>
           </div>
-          <div className="grid gap-6 grid-cols-2 md:grid-cols-3 mb-5">
+          <div class="grid gap-6 grid-cols-2 md:grid-cols-3 mb-5">
             <Partners />
           </div>
-          <div className="row" data-aos="fade-up" data-aos-delay="500"></div>
+          <div class="row" data-aos="fade-up" data-aos-delay="500"></div>
         </div>
       </div>
     </>

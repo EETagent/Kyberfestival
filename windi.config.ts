@@ -20,6 +20,7 @@ export default {
     plugin(({ addUtilities }) => {
       addUtilities({
         ".content-blank": {
+          // eslint-disable-next-line quotes
           content: '""',
         },
       });

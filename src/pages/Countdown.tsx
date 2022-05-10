@@ -19,18 +19,18 @@ const Countdown: Component = () => {
   onCleanup(() => clearInterval(timer));
 
   return (
-    <div className="bg-kyberfestival-green flex flex-col items-center justify-center h-screen">
+    <div class="bg-kyberfestival-green flex flex-col items-center justify-center h-screen">
       <Show
         when={count() >= 0}
         fallback={
-          <div className="flex flex-col items-center text-center text-white">
-            <h1 className="mx-10 text-5xl font-extrabold tracking-tighter uppercase ">
+          <div class="flex flex-col items-center text-center text-white">
+            <h1 class="mx-10 text-5xl font-extrabold tracking-tighter uppercase ">
               Odpočet vypršel 🎉
             </h1>
-            <span className="mt-5">
+            <span class="mt-5">
               Záznamy z konference naleznete{" "}
               <Link
-                className="text-blue-400 hover:text-blue-500 underline"
+                class="text-blue-400 hover:text-blue-500 underline"
                 href="/view"
               >
                 zde
@@ -39,24 +39,24 @@ const Countdown: Component = () => {
           </div>
         }
       >
-        <h1 className="text-5xl font-extrabold tracking-tighter uppercase text-center text-white">
+        <h1 class="text-5xl font-extrabold tracking-tighter uppercase text-center text-white">
           Odpočet do začátku konference:
         </h1>
 
-        <div className="text-xl flex flex-row mt-3 w-50 text-white justify-around">
-          <div className="flex flex-col justify-center text-center mr-10">
+        <div class="text-xl flex flex-row mt-3 w-50 text-white justify-around">
+          <div class="flex flex-col justify-center text-center mr-10">
             <h1>{Math.floor(count() / day)}</h1>
             DNY
           </div>
-          <div className="flex flex-col justify-center text-center mr-10">
+          <div class="flex flex-col justify-center text-center mr-10">
             <h1>{Math.floor((count() % day) / hour)}</h1>
             HODINY
           </div>
-          <div className="flex flex-col justify-center text-center mr-10">
+          <div class="flex flex-col justify-center text-center mr-10">
             <h1>{Math.floor((count() % hour) / minute)}</h1>
             MINUTY
           </div>
-          <div className="flex flex-col justify-center text-center">
+          <div class="flex flex-col justify-center text-center">
             <h1>{Math.floor((count() % minute) / second)}</h1>
             SEKUNDY
           </div>

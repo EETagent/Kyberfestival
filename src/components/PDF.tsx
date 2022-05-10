@@ -1,16 +1,13 @@
 import { Component } from "solid-js";
 
-const PDF: Component<{ src: string; srcFallback: string }> = ({
-  src,
-  srcFallback,
-}) => {
+const PDF: Component<{ src: string; srcFallback: string }> = (props) => {
   return (
     <object
-      className="min-w-screen min-h-screen"
-      data={src}
+      class="min-w-screen min-h-screen"
+      data={props.src}
       type="application/pdf"
     >
-      <iframe className="min-w-full min-h-screen" src={srcFallback}></iframe>
+      <iframe class="min-w-full min-h-screen" src={props.srcFallback}></iframe>
     </object>
   );
 };
