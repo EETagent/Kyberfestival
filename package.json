@@ -1,6 +1,7 @@
 {
   "name": "kyberfestival",
   "version": "1.9.11",
+  "private": true,
   "repository": "https://github.com/EETagent/Kyberfestival",
   "homepage": "https://kyberfestival.cz",
   "license": "MIT",
