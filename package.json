@@ -1,6 +1,10 @@
 {
   "name": "kyberfestival",
   "version": "1.9.11",
+  "repository": "https://github.com/EETagent/Kyberfestival",
+  "homepage": "https://kyberfestival.cz",
+  "license": "MIT",
+  "description": "Stránka pro akci Kyberfestival 2021",
   "type": "module",
   "scripts": {
     "dev": "vite",
