@@ -16,7 +16,7 @@ const About: Component = () => {
         <div class="flex flex-col md:flex-row mb-5">
           <div class="md:w-4/10 lg:w-3/10 xl:w-[35%]">
             <div
-              class="font-bold text-4xl xl:text-6xl relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40"
+              class="font-bold text-4xl xl:text-5xl relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40"
               data-aos="fade-up"
               data-aos-delay="100"
             >
