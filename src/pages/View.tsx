@@ -12,23 +12,23 @@ const View: Component = () => {
           Připojte se k nám | Záznamy
         </h1>
         <hr />
-        <div class="mt-5 flex w-full flex-col items-center md:flex-row justify-center">
+        <div
+          class="mt-5 mb-15 flex w-full flex-col items-center justify-center"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <iframe
-            class="mb-10 md:mr-10 md:mb-0 w-[40vh] md:w-[75vh] h-[50vh]"
+            class="w-full h-80 md:h-120"
             src="https://www.youtube.com/embed/VnT4jh6z8xM"
             title="YouTube video player"
-            data-aos="fade-up"
-            data-aos-delay="300"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
 
           <iframe
-            class="w-[40vh] md:w-[75vh] h-[50vh]"
+            class="mt-5 w-full h-80 md:h-120"
             src="https://www.youtube.com/embed/ErHbi4Frwok"
             title="YouTube video player"
-            data-aos="fade-up"
-            data-aos-delay="300"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
