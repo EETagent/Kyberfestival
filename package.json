@@ -32,12 +32,12 @@
     "vite": "^2.9.9",
     "vite-plugin-solid": "^2.2.6",
     "vite-plugin-windicss": "^1.8.4",
-    "windicss": "^3.5.3"
+    "windicss": "^3.5.4"
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
-    "solid-app-router": "^0.3.2",
-    "solid-js": "^1.4.1",
+    "solid-app-router": "^0.3.3",
+    "solid-js": "^1.4.2",
     "solid-transition-group": "^0.0.8",
     "tsparticles-engine": "^2.0.6",
     "tsparticles-slim": "^2.0.6"

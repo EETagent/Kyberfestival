@@ -11,7 +11,7 @@ on:
 env:
   CUSTOM_BUILD_COMMAND: "npx pnpm i --store=node_modules/.pnpm-store && npm run build"
   APP_LOCATION: "/"
-  APP_ARTIFACT_LOCATION: "dist" 
+  APP_ARTIFACT_LOCATION: "dist"
   AZURE_STATIC_WEB_APPS_API_TOKEN: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
 
 jobs:
@@ -34,7 +34,6 @@ jobs:
           api_location: ${{ env.API_LOCATION }}
           app_artifact_location: ${{ env.APP_ARTIFACT_LOCATION }}
           app_build_command: "npx pnpm i --store=node_modules/.pnpm-store && npm run build"
-
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
