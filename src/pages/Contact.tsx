@@ -8,7 +8,6 @@ const Contact: Component = () => {
         data-aos="fade-up"
         data-aos-delay="200"
       >
-        {" "}
         Kontaktujte nás
       </h1>
       <hr class="mt-2" />

@@ -12,6 +12,7 @@ const Speakers = lazy(() => import("./pages/Speakers"));
 const View = lazy(() => import("./pages/View"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Countdown = lazy(() => import("./pages/Countdown"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 import memorandum from "./assets/documents/memorandum.pdf";
 import program from "./assets/documents/program.pdf";
@@ -51,7 +52,7 @@ const App: Component = () => {
           />
 
           <Route path="/countdown" element={<Countdown />} />
-          {/* <Route path="/*all" element={<NotFound />} /> */}
+          <Route path="/*all" element={<NotFound />} />
         </Routes>
       </main>
       <footer>
