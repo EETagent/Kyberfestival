@@ -110,7 +110,7 @@ const Home: Component = () => {
         >
           21.6.-22.6.
         </h3>
-        <div class="flex flex-row">
+        <div class="flex flex-row" data-nosnippet>
           <Link
             class="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-full mr-4"
             href="/view"
