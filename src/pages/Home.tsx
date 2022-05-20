@@ -60,177 +60,178 @@ const Home: Component = () => {
   });
 
   return (
-    <>
-      <div class="w-8/10 mx-auto">
-        <div
-          id="tsparticles"
-          class="top-0 left-0 -z-30 select-none absolute h-screen"
-        ></div>
-        <div class="mt-20 h-[80vh] flex flex-col  items-center md:items-baseline">
-          <span
-            class="mb-5 text-center xl:mb-10 md:text-2xl xl:text-4xl"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            Konference kybernetické bezpečnosti
+    <div class="w-8/10 mx-auto">
+      <div
+        id="tsparticles"
+        class="top-0 left-0 -z-30 select-none absolute h-screen"
+      ></div>
+      <section class="mt-15 min-h-screen flex flex-col  items-center md:items-baseline">
+        <h3
+          class="mb-5 text-center xl:mb-10 md:text-2xl xl:text-4xl"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Konference kybernetické bezpečnosti
+        </h3>
+        <h1
+          class="text-center md:text-left font-bold xl:mb-10 text-4xl md:text-7xl xl:text-8xl font-bold"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          Kyberfestival 2021
+        </h1>
+        <p
+          class="my-10 w-4/5 text-sm leading-6 text-center md:text-left"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          Kybernetická bezpečnost se nejlépe učí v komunitách, a my máme zájem
+          vytvořit v České republice právě takovou samoučící se komunitu, jejíž
+          základ budou tvořit studenti středních škol, ale která bude mít přesah
+          a provázanost i se studenty podobně zaměřenými (nadanými) na
+          základních a vysokých školách.{" "}
+          <span class="hidden md:block">
+            Chceme proto síťovat střední školy, jejich ředitele, učitele i
+            studenty. Chceme vymyslet projekty a soutěže, na kterých budeme
+            dlouhodobě spolupracovat.
           </span>
-          <h1
-            class="mb-5 text-center md:text-left font-bold xl:mb-10 text-4xl md:text-7xl xl:text-8xl font-bold"
+        </p>
+        <h3
+          class="text-center md:text-left mb-5 xl:mb-10 font-bold text-2xl xl:text-4xl"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          Celetná 13, Staré město
+        </h3>
+        <h3
+          class="mb-5 xl:mb-10 text-2xl xl:text-4xl"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          21.6.-22.6.
+        </h3>
+        <div class="flex flex-row">
+          <Link
+            class="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-full mr-4"
+            href="/view"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <span>Sledovat</span>
+          </Link>
+          <Link
+            class="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-full"
+            href="/memorandum"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <span>Memorandum</span>
+          </Link>
+        </div>
+      </section>
+      <section class="flex flex-col">
+        <div class="flex flex-col md:flex-row mb-5">
+          <div class="md:w-1/2" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-6xl">
+              <h2 class="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">
+                Řečníci
+              </h2>
+            </div>
+          </div>
+          <div
+            class="md:w-1/2 mt-5 md:pl-5"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Kyberfestival 2021
-          </h1>
-          <p
-            class="mb-5 w-4/5 text-sm leading-6 text-center md:text-left"
+            <p>
+              Zhlédněte výstupy významných osobností a expertů z oboru. Seznam
+              všech řečníků <Link href="/speakers">zde</Link>
+            </p>
+          </div>
+        </div>
+        <Speaker right={false} item={SABLIK}></Speaker>
+        <Speaker right={true} item={REHKA}></Speaker>
+        <Speaker right={false} item={PAVEL}></Speaker>
+      </section>
+      <section class="flex flex-col my-15">
+        <div class="flex flex-col md:flex-row mb-5">
+          <div class="md:w-6/10" data-aos="fade-up">
+            <div class="text-6xl">
+              <h2 class="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">
+                Program konference
+              </h2>
+            </div>
+          </div>
+          <div
+            class="md:w-4/10 mt-10 md:pl-5"
             data-aos="fade-up"
-            data-aos-delay="300"
+            data-aos-delay="100"
           >
-            Kybernetická bezpečnost se nejlépe učí v komunitách, a my máme zájem
-            vytvořit v České republice právě takovou samoučící se komunitu,
-            jejíž základ budou tvořit studenti středních škol, ale která bude
-            mít přesah a provázanost i se studenty podobně zaměřenými (nadanými)
-            na základních a vysokých školách. Chceme proto síťovat střední
-            školy, jejich ředitele, učitele i studenty. Chceme vymyslet projekty
-            a soutěže, na kterých budeme dlouhodobě spolupracovat.
-          </p>
-          <span
-            class="text-center md:text-left mb-5 xl:mb-10 font-bold text-2xl xl:text-4xl"
+            <p>
+              Podrobný plán obou konferenčních dnů v PDF ke stažení{" "}
+              <a
+                rel="external"
+                href={program}
+                class="text-blue-600 hover:text-blue-800 underline"
+              >
+                zde
+              </a>
+              , případně pro mobilní telefony{" "}
+              <a
+                rel="external"
+                href={programFallback}
+                class="text-blue-600 hover:text-blue-800 underline"
+              >
+                HTML verze
+              </a>{" "}
+            </p>
+          </div>
+        </div>
+        <For each={PROGRAM}>
+          {(days, i) => (
+            <div class="flex flex-col items-stretch">
+              <h3 class="mt-5 text-2xl xl:text-4xl">
+                Den {i() === 0 ? "první" : "druhý"}
+              </h3>
+              <For each={days}>
+                {(programItem, i) => (
+                  <Program
+                    item={programItem}
+                    borderTop={i() === 0 ? true : false}
+                  />
+                )}
+              </For>
+            </div>
+          )}
+        </For>
+      </section>
+      <section class="flex flex-col">
+        <div class="flex flex-col md:flex-row mb-5">
+          <div class="md:w-6/10">
+            <div class="text-6xl" data-aos="fade-up">
+              <h2 class="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">
+                Partneři
+              </h2>
+            </div>
+          </div>
+          <div
+            class="md:w-4/10 mt-5 md:pl-5"
             data-aos="fade-up"
-            data-aos-delay="300"
+            data-aos-delay="100"
           >
-            Celetná 13, Staré město
-          </span>
-          <span
-            class="mb-5 xl:mb-10 text-2xl xl:text-4xl"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            21.6.-22.6.
-          </span>
-          <div class="flex flex-row">
-            <Link
-              class="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-full mr-4"
-              href="/view"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <span>Sledovat</span>
-            </Link>
-            <Link
-              class="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-full"
-              href="/memorandum"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <span>Memorandum</span>
-            </Link>
+            <p>
+              Bez pomoci našich partnerů by se mohla konference těžko v takovém
+              rozsahu uskutečnit. Děkujeme Karlově univerzitě za poskytnutí
+              fyzických prostor ke konání akce.
+            </p>
           </div>
         </div>
-        <div class="flex flex-col">
-          <div class="flex flex-col md:flex-row mb-5">
-            <div class="md:w-1/2" data-aos="fade-up" data-aos-delay="100">
-              <div class="text-6xl">
-                <h2 class="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">
-                  Řečníci
-                </h2>
-              </div>
-            </div>
-            <div
-              class="md:w-1/2 mt-5 md:pl-5"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <p>
-                Zhlédněte výstupy významných osobností a expertů z oboru. Seznam
-                všech řečníků <Link href="/speakers">zde</Link>
-              </p>
-            </div>
-          </div>
-          <Speaker right={false} item={SABLIK}></Speaker>
-          <Speaker right={true} item={REHKA}></Speaker>
-          <Speaker right={false} item={PAVEL}></Speaker>
+        <div class="grid gap-6 grid-cols-2 md:grid-cols-3 mb-5">
+          <Partners />
         </div>
-        <div class="flex flex-col my-15">
-          <div class="flex flex-col md:flex-row mb-5">
-            <div class="md:w-6/10" data-aos="fade-up">
-              <div class="text-6xl">
-                <h2 class="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">
-                  Program konference
-                </h2>
-              </div>
-            </div>
-            <div
-              class="md:w-4/10 mt-10 md:pl-5"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <p>
-                Podrobný plán obou konferenčních dnů v PDF ke stažení{" "}
-                <a
-                  rel="external"
-                  href={program}
-                  class="text-blue-600 hover:text-blue-800 underline"
-                >
-                  zde
-                </a>
-                , případně pro mobilní telefony{" "}
-                <a
-                  rel="external"
-                  href={programFallback}
-                  class="text-blue-600 hover:text-blue-800 underline"
-                >
-                  HTML verze
-                </a>{" "}
-              </p>
-            </div>
-          </div>
-          <For each={PROGRAM}>
-            {(days, i) => (
-              <div class="flex flex-col items-stretch">
-                <h3 class="mt-5 text-2xl xl:text-4xl">
-                  Den {i() === 0 ? "první" : "druhý"}
-                </h3>
-                <For each={days}>
-                  {(programItem, i) => (
-                    <Program
-                      item={programItem}
-                      borderTop={i() === 0 ? true : false}
-                    />
-                  )}
-                </For>
-              </div>
-            )}
-          </For>
-        </div>
-        <div class="flex flex-col">
-          <div class="flex flex-col md:flex-row mb-5">
-            <div class="md:w-6/10">
-              <div class="text-6xl" data-aos="fade-up">
-                <h2 class="relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-15%] xl:after:w-40">
-                  Partneři
-                </h2>
-              </div>
-            </div>
-            <div
-              class="md:w-4/10 mt-5 md:pl-5"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <p>
-                Bez pomoci našich partnerů by se mohla konference těžko v
-                takovém rozsahu uskutečnit. Děkujeme Karlově univerzitě za
-                poskytnutí fyzických prostor ke konání akce.
-              </p>
-            </div>
-          </div>
-          <div class="grid gap-6 grid-cols-2 md:grid-cols-3 mb-5">
-            <Partners />
-          </div>
-          <div class="row" data-aos="fade-up" data-aos-delay="500"></div>
-        </div>
-      </div>
-    </>
+        <div class="row" data-aos="fade-up" data-aos-delay="500"></div>
+      </section>
+    </div>
   );
 };
 
