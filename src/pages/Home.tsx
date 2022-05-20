@@ -62,7 +62,7 @@ const Home: Component = () => {
   return (
     <>
       <div class="w-8/10 mx-auto">
-        <div id="tsparticles" class="absolute h-screen"></div>
+        <div id="tsparticles" class="-z-30 select-none absolute h-screen"></div>
         <div class="mt-20 xl:mt-40 h-[80vh] flex flex-col  items-center md:items-baseline">
           <span
             class="mb-5 text-center xl:mb-10 md:text-2xl xl:text-4xl"
