@@ -2,7 +2,7 @@ import { Component } from "solid-js";
 
 const Contact: Component = () => {
   return (
-    <div class="w-8/10 mx-auto mt-15 flex flex-col">
+    <section class="w-8/10 mx-auto mt-15 flex flex-col">
       <h1
         class="text-2xl  md:text-4xl xl:text-6xl mb-4 text-left relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-5%] xl:after:w-40"
         data-aos="fade-up"
@@ -108,7 +108,7 @@ const Contact: Component = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

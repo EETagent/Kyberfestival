@@ -16,7 +16,6 @@ const Speakers: Component = () => {
       ? tempFiltered.delete(organization)
       : tempFiltered.add(organization);
     setFiltered(tempFiltered);
-    console.log(tempFiltered);
   };
   const SelectButton: Component<{ item: string }> = (props) => {
     const [selected, setSelected] = createSignal<boolean>(false);
@@ -37,7 +36,7 @@ const Speakers: Component = () => {
     );
   };
   return (
-    <div class="w-8/10 mx-auto mt-15 flex flex-col">
+    <section class="w-8/10 mx-auto mt-15 flex flex-col">
       <h1 class="text-4xl xl:text-6xl my-5 relative after:(content-blank top-[120%] absolute w-24 h-0.5 left-0 bg-kyberfestival-green) md:after:left-[-5%] xl:after:w-40">
         Naši řečníci
       </h1>
@@ -56,7 +55,6 @@ const Speakers: Component = () => {
           {(item) => <SelectButton item={item} />}
         </For>
       </div>
-      <div class="flex flex-col"></div>
       <For
         each={
           filtered().has("VŠECHNO")
@@ -72,7 +70,7 @@ const Speakers: Component = () => {
           </div>
         )}
       </For>
-    </div>
+    </section>
   );
 };
 

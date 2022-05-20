@@ -19,7 +19,7 @@ const Countdown: Component = () => {
   onCleanup(() => clearInterval(timer));
 
   return (
-    <div class="bg-kyberfestival-green flex flex-col items-center justify-center h-screen">
+    <section class="bg-kyberfestival-green flex flex-col items-center justify-center h-screen">
       <Show
         when={count() >= 0}
         fallback={
@@ -62,7 +62,7 @@ const Countdown: Component = () => {
           </div>
         </div>
       </Show>
-    </div>
+    </section>
   );
 };
 
