@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# Neindexovat staré endpointy
+Disallow: /lang
+
 Sitemap: https://kyberfestival.cz/sitemap.xml
