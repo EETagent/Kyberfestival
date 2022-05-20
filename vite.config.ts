@@ -6,6 +6,10 @@ export default defineConfig({
   plugins: [solidPlugin(), WindiCSS()],
   build: {
     target: ["safari12", "firefox78"],
-    polyfillDynamicImport: false,
+    rollupOptions: {
+      output: {
+        assetFileNames: "[name].[ext]",
+      },
+    },
   },
 });
