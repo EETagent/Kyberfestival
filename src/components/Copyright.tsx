@@ -19,7 +19,7 @@ const Copyright: Component = () => {
         href="https://github.com/EETagent/Kyberfestival"
       >
         <span class="hover:text-blue-800">GitHub</span>{" "}
-        <img class="ml-2 w-8 h-auto" src={githubIcon}></img>
+        <img alt="GitHub" class="ml-2 w-8 h-auto" src={githubIcon}></img>
       </a>
     </div>
   );
