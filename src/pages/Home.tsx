@@ -152,6 +152,7 @@ const Home: Component = () => {
               <p>
                 Podrobný plán obou konferenčních dnů v PDF ke stažení{" "}
                 <a
+                  rel="external"
                   href={program}
                   class="text-blue-600 hover:text-blue-800 underline"
                 >
@@ -159,6 +160,7 @@ const Home: Component = () => {
                 </a>
                 , případně pro mobilní telefony{" "}
                 <a
+                  rel="external"
                   href={programFallback}
                   class="text-blue-600 hover:text-blue-800 underline"
                 >
