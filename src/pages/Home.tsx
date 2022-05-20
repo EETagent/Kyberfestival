@@ -62,8 +62,11 @@ const Home: Component = () => {
   return (
     <>
       <div class="w-8/10 mx-auto">
-        <div id="tsparticles" class="-z-30 select-none absolute h-screen"></div>
-        <div class="mt-20 xl:mt-40 h-[80vh] flex flex-col  items-center md:items-baseline">
+        <div
+          id="tsparticles"
+          class="top-0 left-0 -z-30 select-none absolute h-screen"
+        ></div>
+        <div class="mt-20 h-[80vh] flex flex-col  items-center md:items-baseline">
           <span
             class="mb-5 text-center xl:mb-10 md:text-2xl xl:text-4xl"
             data-aos="fade-up"
@@ -72,12 +75,25 @@ const Home: Component = () => {
             Konference kybernetické bezpečnosti
           </span>
           <h1
-            class="mb-5 text-center md:text-left xl:mb-10 text-4xl xl:text-8xl md:text-7xl font-bold"
+            class="mb-5 text-center md:text-left font-bold xl:mb-10 text-4xl md:text-7xl xl:text-8xl font-bold"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             Kyberfestival 2021
           </h1>
+          <p
+            class="mb-5 w-4/5 text-sm leading-6 text-center md:text-left"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            Kybernetická bezpečnost se nejlépe učí v komunitách, a my máme zájem
+            vytvořit v České republice právě takovou samoučící se komunitu,
+            jejíž základ budou tvořit studenti středních škol, ale která bude
+            mít přesah a provázanost i se studenty podobně zaměřenými (nadanými)
+            na základních a vysokých školách. Chceme proto síťovat střední
+            školy, jejich ředitele, učitele i studenty. Chceme vymyslet projekty
+            a soutěže, na kterých budeme dlouhodobě spolupracovat.
+          </p>
           <span
             class="text-center md:text-left mb-5 xl:mb-10 font-bold text-2xl xl:text-4xl"
             data-aos="fade-up"
