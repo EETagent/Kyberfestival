@@ -141,13 +141,7 @@ const Navbar: Component = () => {
             {
               <div
                 class="lg:hidden"
-                style="background: repeating-linear-gradient(
-              -45deg,
-              #f6f5f5,
-              #f6f5f5 10px,
-              #276678 10px,
-              #276678 11px
-            );"
+                style="background: repeating-linear-gradient(-45deg, #f6f5f5, #f6f5f5 10px, #276678 10px, #276678 11px);"
               >
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                   <MenuItemCompact
