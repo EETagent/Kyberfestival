@@ -16,6 +16,16 @@ body {
   background: #f6f5f5;
 }
 
+::-moz-selection {
+  color: white;
+  background: #276678;
+}
+
+::selection {
+  color: white;
+  background: #276678;
+}
+
 .btn-custom:before {
   background: -webkit-gradient(
     linear,
