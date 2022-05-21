@@ -1,6 +1,6 @@
 import { Component, createEffect, createSignal, For } from "solid-js";
 
-import { SPEAKERS } from "../data/speakers";
+import { SPEAKERS } from "../../data/speakers";
 
 import Speaker from "../components/Speaker";
 

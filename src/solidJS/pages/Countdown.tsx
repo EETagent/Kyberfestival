@@ -1,4 +1,3 @@
-import { Link } from "solid-app-router";
 import { Component, createSignal, onCleanup, Show } from "solid-js";
 
 const Countdown: Component = () => {
@@ -29,12 +28,12 @@ const Countdown: Component = () => {
             </h1>
             <span class="mt-5">
               Záznamy z konference naleznete{" "}
-              <Link
+              <a
                 class="text-blue-400 hover:text-blue-500 underline"
                 href="/view"
               >
                 zde
-              </Link>
+              </a>
             </span>
           </div>
         }

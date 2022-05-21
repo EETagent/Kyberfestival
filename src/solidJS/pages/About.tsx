@@ -1,11 +1,11 @@
 import { Component, For } from "solid-js";
 
-import { SPEAKERS } from "../data/speakers";
+import { SPEAKERS } from "../../data/speakers";
 
 import { Partners } from "../components/Partners";
 
-import konferenceJPEG from "../assets/images/konference.jpg";
-import konferenceAVIF from "../assets/images/avif/konference.avif";
+import konferenceJPEG from "../../assets/images/konference.jpg";
+import konferenceAVIF from "../../assets/images/avif/konference.avif";
 
 const About: Component = () => {
   const SABLIK = SPEAKERS.find((e) => e.name === "Radko Sáblík");

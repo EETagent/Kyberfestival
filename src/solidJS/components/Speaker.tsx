@@ -1,5 +1,5 @@
 import { Component, mergeProps, Show } from "solid-js";
-import { SpeakersInterface } from "../data/speakers";
+import { SpeakersInterface } from "../../data/speakers";
 
 const Speaker: Component<{
   item: SpeakersInterface | undefined;
@@ -13,7 +13,7 @@ const Speaker: Component<{
         <div
           class={`md:w-1/2 mb-5 lg:mb-0 ${props.right ? "md:order-2" : ""}`}
           data-aos="fade"
-          data-aos-delay="100"
+          data-aos-delay="200"
         >
           <picture>
             <source srcset={props.item.imageAVIF} type="image/avif" />

@@ -1,5 +1,5 @@
 import { Component, For } from "solid-js";
-import { PartnersInterface, PARTNERS } from "../data/partners";
+import { PartnersInterface, PARTNERS } from "../../data/partners";
 
 const PartnerItem: Component<{ item: PartnersInterface }> = (props) => {
   return (

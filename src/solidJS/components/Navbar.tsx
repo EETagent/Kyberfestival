@@ -1,8 +1,7 @@
-import { Link } from "solid-app-router";
 import { Accessor, Component, createSignal, Show } from "solid-js";
 import { Transition } from "solid-transition-group";
 
-import logo from "../assets/images/logo.png";
+import logo from "../../assets/images/logo.png";
 
 const MenuButton: Component<{
   onClick: VoidFunction;
@@ -54,12 +53,12 @@ const MenuItem: Component<{
   description: string;
 }> = (props) => {
   return (
-    <Link
+    <a
       href={props.href}
       class={`whitespace-nowrap text-gray text-gray-600 hover:text-gray-800 py-2 mx-4 rounded-md text-sm uppercase ${"no-underline"}`}
     >
       {props.description}
-    </Link>
+    </a>
   );
 };
 
@@ -69,13 +68,13 @@ const MenuItemCompact: Component<{
   onClick: VoidFunction;
 }> = (props) => {
   return (
-    <Link
+    <a
       onclick={props.onClick}
       href={props.href}
       class="text-kyberfestival-green hover:bg-kyberfestival-green hover:text-white block mx-10 px-3 py-2 rounded-md text-base uppercase"
     >
       {props.description}
-    </Link>
+    </a>
   );
 };
 
@@ -88,9 +87,9 @@ const Navbar: Component = () => {
         <div class="flex items-center lg:justify-center justify-between h-16">
           <div class="flex items-center">
             <div class="mx-3 flex-shrink-0 order-1 transform transition duration-500 hover:scale-110">
-              <Link href="/" class="hover:cursor-pointer">
+              <a href="/" class="hover:cursor-pointer">
                 <img class="h-10 w-10 " src={logo} alt="Root" />
-              </Link>
+              </a>
             </div>
             <div class="hidden lg:block order-2">
               <div class="flex items-baseline">
@@ -102,16 +101,16 @@ const Navbar: Component = () => {
 
                 <MenuItem href="/contact" description="Kontakt" />
                 <div class="inline-block mx-4">
-                  <Link href="/">🇨🇿</Link>
+                  <a href="/">🇨🇿</a>
                   <span>|</span>
-                  <Link href="/">🇬🇧</Link>
+                  <a href="/">🇬🇧</a>
                 </div>
-                <Link
+                <a
                   href="/view"
                   class="btn-custom uppercase text-kyberfestival-green bg-kyberfestival-bg border-solid border-kyberfestival-green border-1 py-1 px-2 mx-4 inline-block relative hover:before:w-full hover:text-kyberfestival-bg"
                 >
                   <span>Sledovat</span>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

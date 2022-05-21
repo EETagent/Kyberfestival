@@ -1,20 +1,10 @@
-import { Component, createSignal, For, onCleanup, onMount } from "solid-js";
+import { Component, For } from "solid-js";
 
-import { ProgramInterface, PROGRAM } from "../data/program";
-import { SPEAKERS } from "../data/speakers";
+import { ProgramInterface, PROGRAM } from "../../data/program";
+import { SPEAKERS } from "../../data/speakers";
 import { Partners } from "../components/Partners";
 
-import { loadSlim } from "tsparticles-slim";
-import { Container, tsParticles } from "tsparticles-engine";
-
-import { Link } from "solid-app-router";
-
 import Speaker from "../components/Speaker";
-
-import PARTICLES from "../data/particles";
-
-import program from "../assets/documents/program.pdf?url";
-import programFallback from "../assets/documents/program.html?url";
 
 const Program: Component<{
   item: ProgramInterface;
@@ -45,19 +35,6 @@ const Home: Component = () => {
   const SABLIK = SPEAKERS.find((e) => e.name === "Radko Sáblík");
   const REHKA = SPEAKERS.find((e) => e.name === "Karel Řehka");
   const PAVEL = SPEAKERS.find((e) => e.name === "Petr Pavel");
-
-  const [particles, setParticles] = createSignal<Container>();
-
-  onCleanup(() => {
-    particles()?.destroy();
-  });
-
-  onMount(async () => {
-    loadSlim(tsParticles);
-    await tsParticles.load("tsparticles", PARTICLES);
-    setParticles(tsParticles.domItem(0));
-    particles()?.play();
-  });
 
   return (
     <div class="w-8/10 mx-auto">
@@ -111,22 +88,22 @@ const Home: Component = () => {
           21.6.-22.6.
         </h3>
         <div class="flex flex-row" data-nosnippet>
-          <Link
+          <a
             class="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-full mr-4"
             href="/view"
             data-aos="fade-up"
             data-aos-delay="400"
           >
             <span>Sledovat</span>
-          </Link>
-          <Link
+          </a>
+          <a
             class="md:text-xl btn-custom uppercase text-kyberfestival-bg bg-kyberfestival-green py-2 px-4 inline-block border-none relative hover:before:w-full"
             href="/memorandum"
             data-aos="fade-up"
             data-aos-delay="400"
           >
             <span>Memorandum</span>
-          </Link>
+          </a>
         </div>
       </section>
       <section class="flex flex-col">
@@ -145,7 +122,7 @@ const Home: Component = () => {
           >
             <p>
               Zhlédněte výstupy významných osobností a expertů z oboru. Seznam
-              všech řečníků <Link href="/speakers">zde</Link>
+              všech řečníků <a href="/speakers">zde</a>
             </p>
           </div>
         </div>
@@ -171,7 +148,7 @@ const Home: Component = () => {
               Podrobný plán obou konferenčních dnů v PDF ke stažení{" "}
               <a
                 rel="external"
-                href={program}
+                href="/documents/program.pdf"
                 class="text-blue-600 hover:text-blue-800 underline"
               >
                 zde
@@ -179,7 +156,7 @@ const Home: Component = () => {
               , případně pro mobilní telefony{" "}
               <a
                 rel="external"
-                href={programFallback}
+                href="/documents/program.html"
                 class="text-blue-600 hover:text-blue-800 underline"
               >
                 HTML verze

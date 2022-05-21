@@ -1,6 +1,6 @@
 import { Component } from "solid-js";
 
-import githubIcon from "../assets/images/github.svg";
+import githubIcon from "../../assets/images/github.svg";
 
 const Copyright: Component = () => {
   return (
