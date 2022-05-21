@@ -34,11 +34,11 @@
     "windicss": "^3.5.4",
     "@astrojs/solid-js": "^0.1.2",
     "astro": "^1.0.0-beta.31",
-    "solid-js": "^1.4.2"
+    "solid-js": "^1.4.2",
+    "solid-transition-group": "^0.0.8"
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
-    "solid-transition-group": "^0.0.8",
     "tsparticles-engine": "^2.0.6",
     "tsparticles-slim": "^2.0.6"
   },
