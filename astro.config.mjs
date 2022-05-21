@@ -1,9 +1,12 @@
 import { defineConfig } from "astro/config";
-import WindiCSS from "vite-plugin-windicss";
 import solid from "@astrojs/solid-js";
+import sitemap from "@astrojs/sitemap";
+
+import WindiCSS from "vite-plugin-windicss";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://kyberfestival.cz",
   vite: {
     plugins: [WindiCSS()],
     build: {
@@ -15,5 +18,5 @@ export default defineConfig({
       },
     },
   },
-  integrations: [solid()],
+  integrations: [solid(), sitemap()],
 });
