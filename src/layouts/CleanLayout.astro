@@ -30,7 +30,7 @@
     <noscript>Pro zobrazení stránky je nutné aktivovat JavaScript</noscript>
     <div class="flex flex-col h-screen">
         <header>
-            <Navbar client:load />
+            <Navbar client:media="(max-width: 1024px)" />
         </header>
         <main class="flex-1 flex-grow">
             <slot />
