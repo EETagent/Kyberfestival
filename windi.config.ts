@@ -1,6 +1,14 @@
 import plugin from "windicss/plugin";
 
 export default {
+  darkMode: false,
+  corePlugins: {
+    container: false,
+  },
+  extract: {
+    include: ["./src/**/*.{vue,html,jsx,tsx,astro}"],
+    exclude: ["node_modules", ".git"],
+  },
   theme: {
     extend: {
       colors: {

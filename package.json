@@ -1,6 +1,6 @@
 {
   "name": "kyberfestival",
-  "version": "1.9.11",
+  "version": "2.0.0",
   "private": true,
   "repository": "https://github.com/EETagent/Kyberfestival",
   "homepage": "https://kyberfestival.cz",
@@ -8,10 +8,10 @@
   "description": "Stránka pro akci Kyberfestival 2021",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "start": "npm run dev",
-    "build": "vite build",
-    "serve": "vite preview",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. ."
   },
@@ -20,15 +20,21 @@
     "pnpm": ">=6"
   },
   "devDependencies": {
+    "@astrojs/sitemap": "^0.1.0",
+    "@astrojs/solid-js": "^0.1.2",
+    "@babel/core": "^7.18.2",
     "@types/aos": "^3.0.4",
-    "@typescript-eslint/eslint-plugin": "^5.25.0",
-    "@typescript-eslint/parser": "^5.25.0",
-    "eslint": "^8.15.0",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "astro": "^1.0.0-beta.35",
+    "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-solid": "^0.4.7",
+    "eslint-plugin-solid": "^0.5.0",
     "prettier": "^2.6.2",
-    "typescript": "^4.6.4",
+    "solid-js": "^1.4.3",
+    "solid-transition-group": "^0.0.8",
+    "typescript": "^4.7.2",
     "vite": "^2.9.9",
     "vite-plugin-solid": "^2.2.6",
     "vite-plugin-windicss": "^1.8.4",
@@ -36,9 +42,6 @@
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
-    "solid-app-router": "^0.3.3",
-    "solid-js": "^1.4.2",
-    "solid-transition-group": "^0.0.8",
     "tsparticles-engine": "^2.0.6",
     "tsparticles-slim": "^2.0.6"
   }

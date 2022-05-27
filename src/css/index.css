@@ -53,3 +53,10 @@ body {
   position: relative;
   z-index: 2;
 }
+
+.btn-selected::before {
+  width: 100%;
+}
+.btn-selected {
+  color: white;
+}

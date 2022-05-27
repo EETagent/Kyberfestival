@@ -1,0 +1,15 @@
+---
+    import "aos/dist/aos.css";
+    import CleanLayout from "./CleanLayout.astro";
+---
+
+<CleanLayout>
+    <slot />
+</CleanLayout>
+<script>
+    import AOS from "aos";
+    AOS.init({
+        duration: 800,
+        easing: "ease",
+        once: true,
+});</script>

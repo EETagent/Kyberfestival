@@ -1,6 +1,6 @@
 import { Component, createEffect, createSignal, For } from "solid-js";
 
-import { SPEAKERS } from "../data/speakers";
+import { SPEAKERS } from "../../data/speakers";
 
 import Speaker from "../components/Speaker";
 
@@ -28,7 +28,7 @@ const Speakers: Component = () => {
           updateFilter(e, selected());
         }}
         class={`btn-custom xl:text-xl uppercase text-kyberfestival-green bg-kyberfestival-bg border-solid border-kyberfestival-green border-1 py-1 px-2 inline-block relative not-focus:hover:text-kyberfestival-bg not-focus:hover:before:w-full ${
-          selected() ? "text-kyberfestival-bg before:w-full" : ""
+          selected() ? "btn-selected text-kyberfestival-bg before:w-full" : ""
         } my-2 xl:my-4 mr-2 xl:mr-4`}
       >
         <span>{props.item}</span>
