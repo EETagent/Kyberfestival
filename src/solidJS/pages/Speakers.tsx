@@ -24,7 +24,7 @@ const Speakers: Component = () => {
     });
     return (
       <button
-        onclick={(e) => {
+        onClick={(e) => {
           updateFilter(e, selected());
         }}
         class={`btn-custom xl:text-xl uppercase text-kyberfestival-green bg-kyberfestival-bg border-solid border-kyberfestival-green border-1 py-1 px-2 inline-block relative not-focus:hover:text-kyberfestival-bg not-focus:hover:before:w-full ${

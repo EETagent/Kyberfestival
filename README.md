@@ -2,10 +2,8 @@
 
 <img title="" src="./src/assets/images/logo.png?raw=true" alt="" height="" width="99" data-align="left">
 
-
-[![TypeScript](https://img.shields.io/badge/TypeScript-blue.svg)]()  [![Astro](https://img.shields.io/badge/Astro-red.svg)]() [![SolidJS](https://img.shields.io/badge/SolidJS-blue.svg)]()  [![ViteJS](https://img.shields.io/badge/ViteJS-green.svg)]()
+[![TypeScript](https://img.shields.io/badge/TypeScript-blue.svg)]() [![Astro](https://img.shields.io/badge/Astro-red.svg)]() [![SolidJS](https://img.shields.io/badge/SolidJS-blue.svg)]() [![ViteJS](https://img.shields.io/badge/ViteJS-green.svg)]()
 [![SSG](https://img.shields.io/badge/SSG-black.svg)]()
-
 
 Webová stránka konference kybernetické bezpečnosti organizované Smíchovskou střední průmyslovou školu ve spolupráci s Karlovou univerzitou.
 
@@ -15,7 +13,7 @@ Původní verze dostupná ve větvi "old"
 
 ## Struktura webu
 
-Kyberfestival je dostupný v  🇨🇿 české i 🇬🇧 anglické jazykové mutaci
+Kyberfestival je dostupný v 🇨🇿 české i 🇬🇧 anglické jazykové mutaci
 
 ## Video náhled
 
