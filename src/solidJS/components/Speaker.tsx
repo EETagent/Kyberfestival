@@ -8,7 +8,7 @@ const Speaker: Component<{
   const props = mergeProps({ right: false }, _props);
   return (
     // eslint-disable-next-line solid/reactivity
-    props.item && (
+    <Show when={props.item}>
       <div
         class="flex flex-col md:flex-row items-center my-12"
         data-aos="fade"
@@ -58,28 +58,28 @@ const Speaker: Component<{
                     href={props.item.social?.web}
                     target="_blank"
                     class="p-2 fab fa-firefox-browser hover:text-blue-800"
-                  ></a>
+                  />
                 </Show>
                 <Show when={props.item.social?.twitter}>
                   <a
                     href={props.item.social?.twitter}
                     target="_blank"
                     class="p-2 fab fa-twitter hover:text-blue-800"
-                  ></a>
+                  />
                 </Show>
                 <Show when={props.item.social?.facebook}>
                   <a
                     href={props.item.social?.facebook}
                     target="_blank"
                     class="p-2 fab fa-facebook hover:text-blue-800"
-                  ></a>
+                  />
                 </Show>
               </p>
             </Show>
           </div>
         </div>
       </div>
-    )
+    </Show>
   );
 };
 

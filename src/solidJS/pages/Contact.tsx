@@ -74,7 +74,7 @@ const Contact: Component = () => {
                 rows="4"
                 class="border-solid border-kyberfestival-green border-2 py-2 px-2"
                 required
-              ></textarea>
+              />
             </div>
             <button
               type="submit"

@@ -7,7 +7,7 @@ const PDF: Component<{ src: string; srcFallback: string }> = (props) => {
       data={props.src}
       type="application/pdf"
     >
-      <iframe class="min-w-full min-h-screen" src={props.srcFallback}></iframe>
+      <iframe class="min-w-full min-h-screen" src={props.srcFallback} />
     </object>
   );
 };

@@ -41,7 +41,7 @@ const Home: Component = () => {
       <div
         id="tsparticles"
         class="top-0 left-0 -z-30 select-none absolute h-screen"
-      ></div>
+      />
       <section class="mt-15 min-h-screen flex flex-col  items-center md:items-baseline">
         <h3
           class="mb-5 text-center xl:mb-10 md:text-2xl xl:text-4xl"
@@ -126,9 +126,9 @@ const Home: Component = () => {
             </p>
           </div>
         </div>
-        <Speaker right={false} item={SABLIK}></Speaker>
-        <Speaker right={true} item={REHKA}></Speaker>
-        <Speaker right={false} item={PAVEL}></Speaker>
+        <Speaker right={false} item={SABLIK} />
+        <Speaker right={true} item={REHKA} />
+        <Speaker right={false} item={PAVEL} />
       </section>
       <section class="flex flex-col my-15">
         <div class="flex flex-col md:flex-row mb-5">
@@ -205,11 +205,14 @@ const Home: Component = () => {
         </div>
         <div
           class="p-12 grid gap-6 grid-cols-2 md:grid-cols-3 mb-5"
-          style="background: repeating-linear-gradient( -45deg, transparent, transparent 10px, #396576 10px, #396576 11px );"
+          style={{
+            background:
+              "repeating-linear-gradient( -45deg, transparent, transparent 10px, #396576 10px, #396576 11px )",
+          }}
         >
           <Partners />
         </div>
-        <div class="row" data-aos="fade-up" data-aos-delay="500"></div>
+        <div class="row" data-aos="fade-up" data-aos-delay="500" />
       </section>
     </div>
   );

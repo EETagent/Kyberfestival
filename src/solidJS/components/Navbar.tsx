@@ -20,7 +20,7 @@ const MenuButton: Component<{
         <path
           data-v-21716efb=""
           d="M15.5079 34.8482L1 26.4243V9.57571L15.5079 1.15178L30.5 9.58485V26.4152L15.5079 34.8482Z"
-        ></path>
+        />
       </svg>
       <div
         class={
@@ -32,17 +32,17 @@ const MenuButton: Component<{
           class={`block absolute h-0.5 w-4 text-kyberfestival-green bg-current transform transition duration-500 ease-in-out" ${
             props.isMenuOpened() ? "rotate-45" : "-translate-y-1.5"
           }`}
-        ></span>{" "}
+        />{" "}
         <span
           class={`block absolute h-0.5 w-2 text-kyberfestival-green bg-current transform transition duration-500 ease-in-out" ${
             props.isMenuOpened() ? "opacity-0" : ""
           }`}
-        ></span>{" "}
+        />{" "}
         <span
           class={`block absolute h-0.5 w-4 text-kyberfestival-green bg-current transform transition duration-500 ease-in-out ${
             props.isMenuOpened() ? "-rotate-45" : "translate-y-1.5"
           }`}
-        ></span>{" "}
+        />{" "}
       </div>
     </button>
   );
@@ -141,7 +141,10 @@ const Navbar: Component = () => {
             {
               <div
                 class="lg:hidden"
-                style="background: repeating-linear-gradient(-45deg, #f6f5f5, #f6f5f5 10px, #276678 10px, #276678 11px);"
+                style={{
+                  background:
+                    "repeating-linear-gradient(-45deg, #f6f5f5, #f6f5f5 10px, #276678 10px, #276678 11px)",
+                }}
               >
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                   <MenuItemCompact

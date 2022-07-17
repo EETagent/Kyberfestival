@@ -22,7 +22,7 @@ const View: Component = () => {
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-        ></iframe>
+        />
 
         <iframe
           class="mt-5 w-full h-80 md:h-120"
@@ -30,7 +30,7 @@ const View: Component = () => {
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-        ></iframe>
+        />
       </div>
     </section>
   );

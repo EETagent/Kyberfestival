@@ -258,7 +258,10 @@ const About: Component = () => {
         </div>
         <div
           class="p-12 grid gap-6 grid-cols-2 md:grid-cols-3 mb-5"
-          style="background: repeating-linear-gradient( -45deg, transparent, transparent 10px, #396576 10px, #396576 11px );"
+          style={{
+            background:
+              "repeating-linear-gradient( -45deg, transparent, transparent 10px, #396576 10px, #396576 11px )",
+          }}
         >
           <Partners />
         </div>
